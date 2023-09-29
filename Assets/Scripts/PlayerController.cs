@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpSpeed = 7f;
+    public float distanceToGround = 2f;
 
     public bool isPlayerGrounded;
     public LayerMask whatIsGround;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Attack();
-        isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.01f, whatIsGround);
+        isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
         if (_input.jumpPressed && isPlayerGrounded)
         {
