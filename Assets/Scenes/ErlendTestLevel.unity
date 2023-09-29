@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 5552761}
   - component: {fileID: 5552760}
   - component: {fileID: 5552762}
+  - component: {fileID: 5552763}
+  - component: {fileID: 5552764}
   m_Layer: 0
   m_Name: FireWall
   m_TagString: FireWall
@@ -199,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 5552759}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.779, y: 7.5473, z: 0}
-  m_LocalScale: {x: 3.0048118, y: 21.125769, z: 1}
+  m_LocalPosition: {x: -13.2, y: 8, z: 0}
+  m_LocalScale: {x: 2.0573947, y: 21.125769, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 444623780}
@@ -251,6 +253,45 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5552763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b4f11a36654bb4c92ebbc7ad1d1d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &5552764
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552759}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!4 &53504649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
@@ -414,7 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13327deafc7c933428f0f90beac1eb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedToDestroyGameObject: 10
 --- !u!1001 &467933093540965589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -466,6 +506,10 @@ PrefabInstance:
     - target: {fileID: 3699592821678586978, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699592821678586978, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
