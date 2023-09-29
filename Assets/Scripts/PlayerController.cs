@@ -44,16 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
     }
-
-    private void Attack()
-    {
-        RaycastHit2D hit = Physics2D.BoxCast(new Vector2(transform.position.x, transform.position.y), 
-            new Vector2(1f, 1f), 1f, Vector2.down, 0.55f);
-        if (hit.collider == null) return;
-        if (!hit.transform.CompareTag("Enemy")) return;
-        
-        Destroy(hit.transform.gameObject);
-        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed / 2);
+    
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
