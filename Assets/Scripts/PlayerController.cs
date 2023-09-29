@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,7 +24,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Attack();
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
         if (_input.jumpPressed && isPlayerGrounded)
@@ -44,8 +41,6 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
     }
-    
-    }
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
@@ -57,11 +52,6 @@ public class PlayerController : MonoBehaviour
         if (coll.transform.CompareTag("Goal"))
         {
             SceneManager.LoadScene("WinScene");
-        }
-        
-        if (coll.transform.CompareTag("RemovePlayer"))
-        {
-            Destroy(transform.gameObject);
         }
     }
 }
