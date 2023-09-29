@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Goal
+  - RemovePlayer
+  - DeathTrap
+  - FireWall
   layers:
   - Default
   - TransparentFX
