@@ -19,6 +19,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private InputManager _input;
     //private Animator _animator;
+    
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask groundLayer;
+
+    private bool _isWallSliding;
+    private float _wallSlidingSpeed = 2f;
 
     private void Start()
     {
@@ -63,8 +70,33 @@ public class PlayerController : MonoBehaviour
         {
             moveSpeed /= sprintVariable;
         }
-
         
+        WallSlide(); 
+    }
+    
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+    }
+
+    private void WallSlide()
+    {
+        if (IsWalled() && !isPlayerGrounded && _input.moveVector.x != 0f)
+        {
+            Debug.Log("wall");
+            _isWallSliding = true;
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,
+                Mathf.Clamp(_rigidbody2D.velocity.y, -_wallSlidingSpeed, float.MaxValue));
+
+            if (_input.jumpReleased)
+            {
+                _rigidbody2D.velocity = new Vector2(-10, 5f);
+            }
+        }
+        else
+        {
+            _isWallSliding = false;
+        }
     }
     
     private void FixedUpdate()
