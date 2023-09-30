@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
     [Header("Jump")]
-    [HideInInspector] public bool jumpPressed, jumpReleased, jumpKey, jumpHeld;
+    [HideInInspector] public bool jumpPressed, jumpReleased;
 
     [Header("Crouch")] 
     [HideInInspector] public bool crouchPressed, crouchReleased;
@@ -30,9 +29,7 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         moveVector.x = Input.GetAxis("Horizontal");
-                      moveVector.y = Input.GetAxis("Vertical");
-              
-                      jumpKey = Input.GetAxis("Jump") != 0;
+        moveVector.y = Input.GetAxis("Vertical");
 
         if (_gamepad.wasUpdatedThisFrame)
         {
@@ -53,17 +50,12 @@ public class InputManager : MonoBehaviour
         {
            KeyboardControls();  
         }
-        
-        
     }
 
     private void KeyboardControls()
     {
-      
-      
               jumpPressed = _keyboard.spaceKey.wasPressedThisFrame;
               jumpReleased = _keyboard.spaceKey.wasReleasedThisFrame;
-              jumpHeld = _keyboard.spaceKey.isPressed;
               
               crouchPressed = _keyboard.leftCtrlKey.wasPressedThisFrame;
               crouchReleased = _keyboard.leftCtrlKey.wasReleasedThisFrame;
@@ -72,12 +64,11 @@ public class InputManager : MonoBehaviour
               sprintReleased = _keyboard.leftShiftKey.wasReleasedThisFrame;
               sprintHeld = _keyboard.leftShiftKey.isPressed;  
     }
+    
     private void GamepadControls()
     {
-        
         jumpPressed = _gamepad.buttonSouth.wasPressedThisFrame;
         jumpReleased = _gamepad.buttonSouth.wasReleasedThisFrame;
-        jumpHeld = _gamepad.buttonSouth.isPressed;
               
         crouchPressed = _gamepad.buttonEast.wasPressedThisFrame;
         crouchReleased = _gamepad.buttonEast.wasReleasedThisFrame;

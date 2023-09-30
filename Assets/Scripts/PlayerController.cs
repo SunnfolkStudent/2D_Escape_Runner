@@ -62,10 +62,8 @@ public class PlayerController : MonoBehaviour
         if (_input.crouchPressed && isPlayerGrounded)
         {
             moveSpeed /= crouchVariable;
-            
             collisionBox.SetActive(false);
             crouchCollisionBox.SetActive(true);
-            
         }
 
         if (_input.crouchReleased)
