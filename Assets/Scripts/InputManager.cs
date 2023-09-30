@@ -4,17 +4,16 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     [Header("Jump")]
-    public bool jumpPressed, jumpReleased, jumpHeld, jumpKey;
+    [HideInInspector] public bool jumpPressed, jumpReleased, jumpHeld, jumpKey;
 
     [Header("Crouch")] 
-    public bool crouchPressed, crouchReleased;
+    [HideInInspector] public bool crouchPressed, crouchReleased;
     
     [Header("movement")]
-    public Vector2 moveVector;
+    [HideInInspector] public Vector2 moveVector;
 
     [Header("Sprint")] 
-    public bool sprintHeld, SprintReleased;
-    public float stamina = 3;
+    [HideInInspector] public bool sprintPressed, sprintReleased, sprintHeld;
 
     private void Update()
     {
@@ -23,14 +22,15 @@ public class InputManager : MonoBehaviour
 
         jumpKey = Input.GetAxis("Jump") != 0;
         
-        jumpPressed = Keyboard.current.spaceKey.wasPressedThisFrame;
-        jumpReleased = Keyboard.current.spaceKey.wasReleasedThisFrame;
-        jumpHeld = Keyboard.current.spaceKey.isPressed;
+        jumpPressed = (Keyboard.current.spaceKey.wasPressedThisFrame) || (Gamepad.current.aButton.wasPressedThisFrame);
+        jumpReleased = Keyboard.current.spaceKey.wasReleasedThisFrame || (Gamepad.current.aButton.wasReleasedThisFrame);
+        jumpHeld = Keyboard.current.spaceKey.isPressed || (Gamepad.current.aButton.isPressed);
         
-        crouchPressed = Keyboard.current.leftCtrlKey.wasPressedThisFrame;
-        crouchReleased = Keyboard.current.leftCtrlKey.wasReleasedThisFrame;
+        crouchPressed = Keyboard.current.leftCtrlKey.wasPressedThisFrame || (Gamepad.current.bButton.wasPressedThisFrame);
+        crouchReleased = Keyboard.current.leftCtrlKey.wasReleasedThisFrame || (Gamepad.current.bButton.wasReleasedThisFrame);
         
-        sprintHeld = Keyboard.current.leftShiftKey.isPressed;
-        SprintReleased = Keyboard.current.leftShiftKey.wasReleasedThisFrame;
+        sprintPressed = Keyboard.current.leftShiftKey.wasPressedThisFrame || (Gamepad.current.leftStickButton.wasPressedThisFrame);
+        sprintReleased = Keyboard.current.leftShiftKey.wasReleasedThisFrame || (Gamepad.current.leftStickButton.wasReleasedThisFrame);
+        sprintHeld = Keyboard.current.leftShiftKey.isPressed || (Gamepad.current.leftStickButton.isPressed);
     }
 }
