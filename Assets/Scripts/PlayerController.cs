@@ -23,19 +23,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
-    private int direction = 1;
+    private int _direction = 1;
 
     private bool _isWallSliding;
-    private float _wallSlidingSpeed = 2f;
+    private readonly float _wallSlidingSpeed = 2f;
 
     
-    private bool isFacingRight = true;
+    private bool _isFacingRight = true;
+    private bool _canFlip;
     
-    private bool isWallJumping;
-    private float wallJumpingDirection;
-    private float wallJumpingTime = 0.2f;
-    private float wallJumpingCounter;
-    private float wallJumpingDuration = 0.4f;
+    private bool _isWallJumping;
+    private float _wallJumpingDirection;
+    private const float WallJumpingTime = 0.2f;
+    private float _wallJumpingCounter;
+    private const float WallJumpingDuration = 0.4f;
     public Vector2 wallJumpingPower = new Vector2(15f, 16f);
 
     private void Start()
@@ -57,19 +58,25 @@ public class PlayerController : MonoBehaviour
         
         if (_input.jumpReleased && _rigidbody2D.velocity.y > 0f)
         {
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y * 0.2f );
+            var velocity = _rigidbody2D.velocity;
+            velocity = new Vector2(velocity.x, velocity.y * 0.2f );
+            _rigidbody2D.velocity = velocity;
         }
 
         if (_input.crouchPressed && isPlayerGrounded)
         {
             moveSpeed /= crouchVariable;
             
+            collisionBox.SetActive(false);
+            crouchCollisionBox.SetActive(true);
+            
         }
 
         if (_input.crouchReleased)
         {
             moveSpeed *= crouchVariable;
-            
+            collisionBox.SetActive(true);
+            crouchCollisionBox.SetActive(false);
         }
 
         if (_input.sprintPressed)
@@ -81,14 +88,19 @@ public class PlayerController : MonoBehaviour
         {
             moveSpeed /= sprintVariable;
         }
+
+        if (IsWalled())
+        {
+            Flip();
+        }
         
         WallSlide();
         WallJump();
         
-        if (!isWallJumping)
-        {
-            Flip();
-        }
+        // if (!isWallJumping)
+        // {
+        //     Flip();
+        // }
     }
     
     private bool IsWalled()
@@ -102,9 +114,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("wall");
             _isWallSliding = true;
-            wallJumpingDirection = transform.localScale.x;
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,
-                Mathf.Clamp(_rigidbody2D.velocity.y, -_wallSlidingSpeed, float.MaxValue));
+            _wallJumpingDirection = transform.localScale.x;
+            var velocity = _rigidbody2D.velocity;
+            _rigidbody2D.velocity = new Vector2(velocity.x,
+                Mathf.Clamp(velocity.y, -_wallSlidingSpeed, float.MaxValue));
         }
         else
         {
@@ -114,59 +127,60 @@ public class PlayerController : MonoBehaviour
 
     private void StopWallJumping()
     {
-        isWallJumping = false;
+        _isWallJumping = false;
     }
 
     private void WallJump()
     {
         if (_isWallSliding)
         {
-            isWallJumping = false;
-            wallJumpingDirection = -transform.localScale.x;
-            wallJumpingCounter = wallJumpingTime;
+            _isWallJumping = false;
+            _wallJumpingDirection = -transform.localScale.x;
+            _wallJumpingCounter = WallJumpingTime;
             
             CancelInvoke(nameof(StopWallJumping));
         }
         else
         {
-            wallJumpingCounter -= Time.deltaTime;
+            _wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (_input.jumpPressed && wallJumpingCounter > 0f)
+        if (_input.jumpPressed && _wallJumpingCounter > 0f)
         {
-            isWallJumping = true;
-            _rigidbody2D.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
-            wallJumpingCounter = 0f;
+            _isWallJumping = true;
+            _rigidbody2D.velocity = new Vector2(_wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            _wallJumpingCounter = 0f;
         }
         
-        if (transform.localScale.x != wallJumpingDirection)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
+        // if (transform.localScale.x != wallJumpingDirection)
+        // {
+        //     isFacingRight = !isFacingRight;
+        //     Vector3 localScale = transform.localScale;
+        //     localScale.x *= -1f;
+        //     transform.localScale = localScale;
+        // }
         
-        Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        Invoke(nameof(StopWallJumping), WallJumpingDuration);
     }
     
     private void FixedUpdate()
     {
-        if (!isWallJumping)
+        if (!_isWallJumping)
         {
             _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
         }
 
         if (_input.moveVector.x < 0)
         {
-             direction = -1;
+             _direction = -1;
         }
         else if (_input.moveVector.x > 0)
         {
-            direction = 1;
+            _direction = 1;
         }
-        
-        transform.localScale = new Vector2(direction, transform.localScale.y);
+
+        var transform1 = transform;
+        transform1.localScale = new Vector2(_direction, transform1.localScale.y);
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
@@ -178,18 +192,19 @@ public class PlayerController : MonoBehaviour
 
         if (coll.transform.CompareTag("Goal"))
         {
-            SceneManager.LoadScene("WinScene");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
     private void Flip()
     {
-        if (isFacingRight && _input.moveVector.x < 0f || !isFacingRight && _input.moveVector.x > 0f)
+        if (_isFacingRight && _input.moveVector.x < 0f || !_isFacingRight && _input.moveVector.x > 0f)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
+            _isFacingRight = !_isFacingRight;
+            var transform1 = transform;
+            Vector3 localScale = transform1.localScale;
             localScale.x *= -1f;
-            transform.localScale = localScale;
+            transform1.localScale = localScale;
         }
     }
 }
