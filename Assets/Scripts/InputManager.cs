@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     [Header("Jump")]
-    [HideInInspector] public bool jumpPressed, jumpReleased, jumpHeld, jumpKey;
+    [HideInInspector] public bool jumpPressed, jumpReleased, jumpKey, jumpHeld;
 
     [Header("Crouch")] 
     [HideInInspector] public bool crouchPressed, crouchReleased;
@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
         moveVector.y = Input.GetAxis("Vertical");
 
         jumpKey = Input.GetAxis("Jump") != 0;
-        
+
         jumpPressed = (Keyboard.current.spaceKey.wasPressedThisFrame) || (Gamepad.current.aButton.wasPressedThisFrame);
         jumpReleased = Keyboard.current.spaceKey.wasReleasedThisFrame || (Gamepad.current.aButton.wasReleasedThisFrame);
         jumpHeld = Keyboard.current.spaceKey.isPressed || (Gamepad.current.aButton.isPressed);
