@@ -130,6 +130,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
   m_PrefabInstance: {fileID: 1917068307827058503}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &331037995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1281236388471430151, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+  m_PrefabInstance: {fileID: 467933093540965589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &407623675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +298,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
+--- !u!4 &1021041240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4343889579859982735, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+  m_PrefabInstance: {fileID: 467933093540965589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134396432
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +411,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1784160237701481857, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
   m_PrefabInstance: {fileID: 467933093540965589}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2102752328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2121796572763679802, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+  m_PrefabInstance: {fileID: 467933093540965589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &467933093540965589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,6 +467,30 @@ PrefabInstance:
     - target: {fileID: 3699592821678586978, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: wallCheck
+      value: 
+      objectReference: {fileID: 1021041240}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: collisionBox
+      value: 
+      objectReference: {fileID: 331037995}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: isPlayerGrounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: wallLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: crouchCollisionBox
+      value: 
+      objectReference: {fileID: 2102752328}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
