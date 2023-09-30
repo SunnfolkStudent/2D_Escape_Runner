@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpingPower = new Vector2(15f, 16f);
+    public Vector2 wallJumpingPower = new Vector2(15f, 16f);
 
     private void Start()
     {
