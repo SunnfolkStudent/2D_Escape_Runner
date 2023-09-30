@@ -27,12 +27,8 @@ public class PlayerController : MonoBehaviour
 
     private bool _isWallSliding;
     private readonly float _wallSlidingSpeed = 2f;
-
     
-    private bool _isFacingRight = true;
-    private bool _canFlip;
-    
-    private bool _isWallJumping;
+    private bool _isWallJumping = true;
     private float _wallJumpingDirection;
     private const float WallJumpingTime = 0.2f;
     private float _wallJumpingCounter;
@@ -88,19 +84,10 @@ public class PlayerController : MonoBehaviour
         {
             moveSpeed /= sprintVariable;
         }
-
-        if (IsWalled())
-        {
-            Flip();
-        }
         
         WallSlide();
-        WallJump();
         
-        // if (!isWallJumping)
-        // {
-        //     Flip();
-        // }
+        WallJump();
     }
     
     private bool IsWalled()
@@ -110,11 +97,9 @@ public class PlayerController : MonoBehaviour
 
     private void WallSlide()
     {
-        if (IsWalled() && !isPlayerGrounded)// && _input.moveVector.x != 0f
+        if (IsWalled() && !isPlayerGrounded && _input.moveVector.x != 0f)
         {
-            Debug.Log("wall");
             _isWallSliding = true;
-            _wallJumpingDirection = transform.localScale.x;
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x,
                 Mathf.Clamp(velocity.y, -_wallSlidingSpeed, float.MaxValue));
@@ -147,18 +132,11 @@ public class PlayerController : MonoBehaviour
 
         if (_input.jumpPressed && _wallJumpingCounter > 0f)
         {
+            Flip();
             _isWallJumping = true;
             _rigidbody2D.velocity = new Vector2(_wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             _wallJumpingCounter = 0f;
         }
-        
-        // if (transform.localScale.x != wallJumpingDirection)
-        // {
-        //     isFacingRight = !isFacingRight;
-        //     Vector3 localScale = transform.localScale;
-        //     localScale.x *= -1f;
-        //     transform.localScale = localScale;
-        // }
         
         Invoke(nameof(StopWallJumping), WallJumpingDuration);
     }
@@ -198,13 +176,9 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        if (_isFacingRight && _input.moveVector.x < 0f || !_isFacingRight && _input.moveVector.x > 0f)
-        {
-            _isFacingRight = !_isFacingRight;
-            var transform1 = transform;
-            Vector3 localScale = transform1.localScale;
-            localScale.x *= -1f;
-            transform1.localScale = localScale;
-        }
+        var transform1 = transform;
+        Vector3 localScale = transform1.localScale;
+        localScale.x *= -1f;
+        transform1.localScale = localScale;
     }
 }
