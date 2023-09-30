@@ -373,7 +373,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e92bd8e7b64b7ed48b4a587ab31ee6ec, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -398,8 +398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPressed: 0
   jumpReleased: 0
-  jumpHeld: 0
   jumpKey: 0
+  jumpHeld: 0
   crouchPressed: 0
   crouchReleased: 0
   moveVector: {x: 0, y: 0}
@@ -425,12 +425,16 @@ MonoBehaviour:
   distanceToGround: 1.1
   staminaTime: 3
   slideDistance: 6
-  collisionBox: {fileID: 0}
-  crouchCollisionBox: {fileID: 0}
+  collisionBox: {fileID: 1281236388471430151}
+  crouchCollisionBox: {fileID: 2121796572763679802}
   isPlayerGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  wallCheck: {fileID: 4343889579859982735}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &7968212949481612958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,10 +447,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13327deafc7c933428f0f90beac1eb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallCheck: {fileID: 4343889579859982735}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
