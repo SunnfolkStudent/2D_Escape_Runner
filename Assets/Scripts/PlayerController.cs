@@ -22,10 +22,21 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private LayerMask groundLayer;
+
+    private int direction = 1;
 
     private bool _isWallSliding;
     private float _wallSlidingSpeed = 2f;
+
+    
+    private bool isFacingRight = true;
+    
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(15f, 16f);
 
     private void Start()
     {
@@ -71,7 +82,13 @@ public class PlayerController : MonoBehaviour
             moveSpeed /= sprintVariable;
         }
         
-        WallSlide(); 
+        WallSlide();
+        WallJump();
+        
+        if (!isWallJumping)
+        {
+            Flip();
+        }
     }
     
     private bool IsWalled()
@@ -81,27 +98,75 @@ public class PlayerController : MonoBehaviour
 
     private void WallSlide()
     {
-        if (IsWalled() && !isPlayerGrounded && _input.moveVector.x != 0f)
+        if (IsWalled() && !isPlayerGrounded)// && _input.moveVector.x != 0f
         {
             Debug.Log("wall");
             _isWallSliding = true;
+            wallJumpingDirection = transform.localScale.x;
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,
                 Mathf.Clamp(_rigidbody2D.velocity.y, -_wallSlidingSpeed, float.MaxValue));
-
-            if (_input.jumpReleased)
-            {
-                _rigidbody2D.velocity = new Vector2(-10, 5f);
-            }
         }
         else
         {
             _isWallSliding = false;
         }
     }
+
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
+    }
+
+    private void WallJump()
+    {
+        if (_isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+            
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;
+        }
+
+        if (_input.jumpPressed && wallJumpingCounter > 0f)
+        {
+            isWallJumping = true;
+            _rigidbody2D.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+        }
+        
+        if (transform.localScale.x != wallJumpingDirection)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+        
+        Invoke(nameof(StopWallJumping), wallJumpingDuration);
+    }
     
     private void FixedUpdate()
     {
-        _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
+        if (!isWallJumping)
+        {
+            _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
+        }
+
+        if (_input.moveVector.x < 0)
+        {
+             direction = -1;
+        }
+        else if (_input.moveVector.x > 0)
+        {
+            direction = 1;
+        }
+        
+        transform.localScale = new Vector2(direction, transform.localScale.y);
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
@@ -114,6 +179,17 @@ public class PlayerController : MonoBehaviour
         if (coll.transform.CompareTag("Goal"))
         {
             SceneManager.LoadScene("WinScene");
+        }
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && _input.moveVector.x < 0f || !isFacingRight && _input.moveVector.x > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 }
