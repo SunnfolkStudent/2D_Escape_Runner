@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float distanceToGround = 2f;
     public float staminaTime = 3f;
     public float slideDistance = 6f;
+    public GameObject collisionBox;
+    public GameObject crouchCollisionBox;
 
     public bool isPlayerGrounded;
     public LayerMask whatIsGround;
@@ -40,16 +42,16 @@ public class PlayerController : MonoBehaviour
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y * 0.2f );
         }
 
-        if (_input.crouchPressed && isPlayerGrounded || _input.sprintReleased)
+        if (_input.crouchPressed && isPlayerGrounded)
         {
             moveSpeed /= crouchVariable;
-            transform.localScale = new Vector3(1f, 1.5f ,1f);
+            
         }
 
-        if (_input.crouchReleased || _input.sprintPressed)
+        if (_input.crouchReleased)
         {
             moveSpeed *= crouchVariable;
-            transform.localScale = new Vector3(1f, 2, 1f);
+            
         }
 
         if (_input.sprintPressed)
