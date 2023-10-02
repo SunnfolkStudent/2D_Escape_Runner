@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("sprint", true);
         }
 
-        if (_input.sprintReleased)
+        if (_input.sprintReleased )
         {
             sprinting = false;
             moveSpeed /= sprintVariable;
