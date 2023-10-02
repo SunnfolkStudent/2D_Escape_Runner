@@ -1,0 +1,1474 @@
+fileFormatVersion: 2
+guid: 12a5801d2830f1a4e9fc67ffc4eedd00
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638318409835925382
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Runner animations_Frame_0
+    originalName: 
+    pivot: {x: 0.484375, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 379
+      width: 32
+      height: 64
+    spriteID: 2c8f7f0977622ad45bc6a2cb88c727bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 379}
+  - name: Runner animations_Frame_1
+    originalName: 
+    pivot: {x: 0.48684213, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 142
+      width: 38
+      height: 63
+    spriteID: f1bc51a8915b6364eb82b76e41dcd7e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 142}
+  - name: Runner animations_Frame_2
+    originalName: 
+    pivot: {x: 0.4895833, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 139
+      width: 48
+      height: 62
+    spriteID: c90cf0ca2bfec6a48b6180de2bd7da73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 139}
+  - name: Runner animations_Frame_3
+    originalName: 
+    pivot: {x: 0.48684213, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 213
+      width: 38
+      height: 63
+    spriteID: a75ea66be109e5e4cb301f4ffd0e8c83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 213}
+  - name: Runner animations_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 56
+      width: 31
+      height: 64
+    spriteID: d54da02e6c8eb5349bab54d4f72e8741
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 56}
+  - name: Runner animations_Frame_5
+    originalName: 
+    pivot: {x: 0.5131579, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 331
+      width: 38
+      height: 64
+    spriteID: e7e84e866f1b7e347bee4983d2f6efb9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 331}
+  - name: Runner animations_Frame_6
+    originalName: 
+    pivot: {x: 0.4642857, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 4
+      width: 42
+      height: 63
+    spriteID: 88d2058d850b4c94abfa2082fbd8b904
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 4}
+  - name: Runner animations_Frame_7
+    originalName: 
+    pivot: {x: 0.4787234, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 275
+      width: 47
+      height: 62
+    spriteID: 116b4413aa1de4446979a0915c88feec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 275}
+  - name: Runner animations_Frame_8
+    originalName: 
+    pivot: {x: 0.48684213, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 284
+      width: 38
+      height: 63
+    spriteID: 32424a6f9268dcb4384d4894121f9d85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 284}
+  - name: Runner animations_Frame_9
+    originalName: 
+    pivot: {x: 0.46551725, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 128
+      width: 29
+      height: 64
+    spriteID: 51ef8111ae660054baf7e959486ffe83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 128}
+  - name: Runner animations_Frame_10
+    originalName: 
+    pivot: {x: 0.55769235, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 341
+      width: 26
+      height: 63
+    spriteID: b81545cfb0255604daefa5877d898e99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 341}
+  - name: Runner animations_Frame_11
+    originalName: 
+    pivot: {x: 0.6034483, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 200
+      width: 29
+      height: 62
+    spriteID: cd2ff96d2a99868488c048e744a9fa39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 200}
+  - name: Runner animations_Frame_12
+    originalName: 
+    pivot: {x: 0.44642854, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 270
+      width: 28
+      height: 63
+    spriteID: 7501eb780575f0241b7b653f9dea25cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 270}
+  - name: Runner animations_Frame_13
+    originalName: 
+    pivot: {x: 0.57843137, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 71
+      width: 51
+      height: 60
+    spriteID: b882e70680734b54381e7d0bf476d8e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 71}
+  - name: Runner animations_Frame_14
+    originalName: 
+    pivot: {x: 0.53636366, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 55
+      height: 59
+    spriteID: 72d604090aa2d324d99d3159b07385a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Runner animations_Frame_15
+    originalName: 
+    pivot: {x: 0.51960784, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 209
+      width: 51
+      height: 58
+    spriteID: 70c4d1557142c9e419fe2671fd457393
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 209}
+  - name: Runner animations_Frame_16
+    originalName: 
+    pivot: {x: 0.5243902, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 403
+      width: 41
+      height: 59
+    spriteID: ea7b9711e77759d48a176c85a375e926
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 403}
+  - name: Runner animations_Frame_17
+    originalName: 
+    pivot: {x: 0.47142854, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 311
+      width: 35
+      height: 60
+    spriteID: d5a7ea4b4e9a33344812f96e0fa588e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 311}
+  - name: Runner animations_Frame_18
+    originalName: 
+    pivot: {x: 0.53571427, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 197
+      width: 42
+      height: 59
+    spriteID: 75f418a7caa3d294988a4cbeabb16579
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 197}
+  - name: Runner animations_Frame_19
+    originalName: 
+    pivot: {x: 0.5340909, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 67
+      width: 44
+      height: 58
+    spriteID: 1e08f8efe698b8c49bf535197713426b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 67}
+  - name: Runner animations_Frame_20
+    originalName: 
+    pivot: {x: 0.53571427, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 264
+      width: 42
+      height: 59
+    spriteID: 91cebbbaee424ac4fae7ade5695056e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 264}
+  - name: Runner animations_Frame_21
+    originalName: 
+    pivot: {x: 0.6323529, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 241
+      width: 34
+      height: 62
+    spriteID: 92e1db2c18f6d564ba61ceb9f787299d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 241}
+  - name: Runner animations_Frame_22
+    originalName: 
+    pivot: {x: 0.6219512, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 75
+      width: 41
+      height: 59
+    spriteID: 36791c1ae5ac6c148aa6544bc81e0cff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 75}
+  - name: Runner animations_Frame_23
+    originalName: 
+    pivot: {x: 0.63333327, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 133
+      width: 45
+      height: 56
+    spriteID: f9ef638a516867141807ad4fa05aafad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 133}
+  - name: Runner animations_Frame_24
+    originalName: 
+    pivot: {x: 0.64772725, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 66
+      width: 44
+      height: 53
+    spriteID: 213e95883b26cc9468b5b72a054024b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 66}
+  - name: Runner animations_Frame_25
+    originalName: 
+    pivot: {x: 0.63953483, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 127
+      width: 43
+      height: 50
+    spriteID: 23f33acb0c738274a88b724bdd782532
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 127}
+  - name: Runner animations_Frame_26
+    originalName: 
+    pivot: {x: 0.59210527, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 451
+      width: 38
+      height: 47
+    spriteID: 080a7a0429e4fc349a4773968ae91bee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 451}
+  - name: Runner animations_Frame_27
+    originalName: 
+    pivot: {x: 0.58108103, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 412
+      width: 37
+      height: 44
+    spriteID: d5885abe7ddf6104f83496e745499ae8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 412}
+  - name: Runner animations_Frame_28
+    originalName: 
+    pivot: {x: 0.5147059, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 464
+      width: 34
+      height: 40
+    spriteID: 7381eec5d2c8f0a4ebf0612d238498fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 464}
+  - name: Runner animations_Frame_29
+    originalName: 
+    pivot: {x: 0.5147059, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 413
+      y: 162
+      width: 34
+      height: 40
+    spriteID: b33474e20c10818459b26c4e7882e661
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 413, y: 162}
+  - name: Runner animations_Frame_31
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 355
+      width: 39
+      height: 60
+    spriteID: bc28f31e699f3b74eb3ea9042af4276d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 355}
+  - name: Runner animations_Frame_32
+    originalName: 
+    pivot: {x: 0.5408163, y: 0.01754386}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 345
+      width: 49
+      height: 57
+    spriteID: 412b96672aa135542875236a4818db6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 345}
+  - name: Runner animations_Frame_33
+    originalName: 
+    pivot: {x: 0.4895833, y: 0.018181818}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 4
+      width: 48
+      height: 55
+    spriteID: 7075838090d92224094868fe84f35859
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 4}
+  - name: Runner animations_Frame_34
+    originalName: 
+    pivot: {x: 0.37499997, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 185
+      width: 44
+      height: 48
+    spriteID: a6d662e78242f3d41a39bb6e6ee68bb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 185}
+  - name: Runner animations_Frame_35
+    originalName: 
+    pivot: {x: 0.49074075, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 4
+      width: 54
+      height: 38
+    spriteID: 4e91911dd169dc24ea4779bf1ef9d578
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 4}
+  - name: Runner animations_Frame_36
+    originalName: 
+    pivot: {x: 0.4921875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 413
+      y: 39
+      width: 64
+      height: 25
+    spriteID: a9cde5edf12be604d872286bbf2ecb27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 413, y: 39}
+  - name: Runner animations_Frame_37
+    originalName: 
+    pivot: {x: 0.49305555, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 413
+      y: 72
+      width: 72
+      height: 22
+    spriteID: 3d1a98c822e27554ea5f6986feb1773f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 413, y: 72}
+  - name: Runner animations_Frame_38
+    originalName: 
+    pivot: {x: 0.46323526, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 413
+      y: 102
+      width: 68
+      height: 22
+    spriteID: a6d8776df5a8d694bb26b9d6b7b9a1c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 413, y: 102}
+  - name: Runner animations_Frame_39
+    originalName: 
+    pivot: {x: 0.48412699, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 413
+      y: 132
+      width: 63
+      height: 22
+    spriteID: 3dfa63960f266cc47bba7d7e42de806f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 413, y: 132}
+  - name: Runner animations_Frame_40
+    originalName: 
+    pivot: {x: 0.49242425, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 413
+      y: 4
+      width: 66
+      height: 27
+    spriteID: 530de392c42dfaf4ea94f572b5a9f532
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 413, y: 4}
+  - name: Runner animations_Frame_41
+    originalName: 
+    pivot: {x: 0.46610168, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 44
+      width: 59
+      height: 32
+    spriteID: 9383b1658d842bb489938d18606c00f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 44}
+  - name: Runner animations_Frame_42
+    originalName: 
+    pivot: {x: 0.44354838, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 4
+      width: 62
+      height: 32
+    spriteID: 662f931c06f69d249bfbbdbc8134dcd0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 4}
+  - name: Runner animations_Frame_43
+    originalName: 
+    pivot: {x: 0.4895833, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 4
+      width: 48
+      height: 44
+    spriteID: f15fe6ddb5c029747815401d3c65bd2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 4}
+  - name: Runner animations_Frame_44
+    originalName: 
+    pivot: {x: 0.37804878, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 423
+      width: 41
+      height: 54
+    spriteID: 4850f04ed8839f141bc9f549bb226852
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 423}
+  - name: Runner animations_Frame_45
+    originalName: 
+    pivot: {x: 0.42045456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 4
+      width: 44
+      height: 54
+    spriteID: b2d3a013825c4dc498c878d298618445
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 4}
+  - name: Runner animations_Frame_46
+    originalName: 
+    pivot: {x: 0.4431818, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 410
+      width: 44
+      height: 61
+    spriteID: 212b276a68523454c8526674095626ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 410}
+  - name: Runner animations_Frame_30
+    originalName: 
+    pivot: {x: -0.031250134, y: -1.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 489
+      y: 102
+      width: 16
+      height: 16
+    spriteID: ed3ed7335f7af0946afdd6c45ca50dc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 489, y: 102}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 996619437
+    name: Runner animations
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Runner animations_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 26
+        y: 0
+        width: 32
+        height: 64
+      spriteId: 2c8f7f0977622ad45bc6a2cb88c727bf
+    - name: Runner animations_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 23
+        y: 0
+        width: 38
+        height: 63
+      spriteId: f1bc51a8915b6364eb82b76e41dcd7e4
+    - name: Runner animations_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 18
+        y: 0
+        width: 48
+        height: 62
+      spriteId: c90cf0ca2bfec6a48b6180de2bd7da73
+    - name: Runner animations_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 23
+        y: 0
+        width: 38
+        height: 63
+      spriteId: a75ea66be109e5e4cb301f4ffd0e8c83
+    - name: Runner animations_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 26
+        y: 0
+        width: 31
+        height: 64
+      spriteId: d54da02e6c8eb5349bab54d4f72e8741
+    - name: Runner animations_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 22
+        y: 0
+        width: 38
+        height: 64
+      spriteId: e7e84e866f1b7e347bee4983d2f6efb9
+    - name: Runner animations_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 22
+        y: 0
+        width: 42
+        height: 63
+      spriteId: 88d2058d850b4c94abfa2082fbd8b904
+    - name: Runner animations_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 19
+        y: 0
+        width: 47
+        height: 62
+      spriteId: 116b4413aa1de4446979a0915c88feec
+    - name: Runner animations_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 23
+        y: 0
+        width: 38
+        height: 63
+      spriteId: 32424a6f9268dcb4384d4894121f9d85
+    - name: Runner animations_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 28
+        y: 0
+        width: 29
+        height: 64
+      spriteId: 51ef8111ae660054baf7e959486ffe83
+    - name: Runner animations_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 27
+        y: 0
+        width: 26
+        height: 63
+      spriteId: b81545cfb0255604daefa5877d898e99
+    - name: Runner animations_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 24
+        y: 0
+        width: 29
+        height: 62
+      spriteId: cd2ff96d2a99868488c048e744a9fa39
+    - name: Runner animations_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 29
+        y: 0
+        width: 28
+        height: 63
+      spriteId: 7501eb780575f0241b7b653f9dea25cf
+    - name: Runner animations_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 12
+        y: 0
+        width: 51
+        height: 60
+      spriteId: b882e70680734b54381e7d0bf476d8e3
+    - name: Runner animations_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 12
+        y: 0
+        width: 55
+        height: 59
+      spriteId: 72d604090aa2d324d99d3159b07385a0
+    - name: Runner animations_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 15
+        y: 0
+        width: 51
+        height: 58
+      spriteId: 70c4d1557142c9e419fe2671fd457393
+    - name: Runner animations_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 20
+        y: 0
+        width: 41
+        height: 59
+      spriteId: ea7b9711e77759d48a176c85a375e926
+    - name: Runner animations_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 25
+        y: 0
+        width: 35
+        height: 60
+      spriteId: d5a7ea4b4e9a33344812f96e0fa588e3
+    - name: Runner animations_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 19
+        y: 0
+        width: 42
+        height: 59
+      spriteId: 75f418a7caa3d294988a4cbeabb16579
+    - name: Runner animations_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 18
+        y: 0
+        width: 44
+        height: 58
+      spriteId: 1e08f8efe698b8c49bf535197713426b
+    - name: Runner animations_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 19
+        y: 0
+        width: 42
+        height: 59
+      spriteId: 91cebbbaee424ac4fae7ade5695056e0
+    - name: Runner animations_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 20
+        y: 0
+        width: 34
+        height: 62
+      spriteId: 92e1db2c18f6d564ba61ceb9f787299d
+    - name: Runner animations_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 16
+        y: 0
+        width: 41
+        height: 59
+      spriteId: 36791c1ae5ac6c148aa6544bc81e0cff
+    - name: Runner animations_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 13
+        y: 0
+        width: 45
+        height: 56
+      spriteId: f9ef638a516867141807ad4fa05aafad
+    - name: Runner animations_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 13
+        y: 0
+        width: 44
+        height: 53
+      spriteId: 213e95883b26cc9468b5b72a054024b9
+    - name: Runner animations_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 14
+        y: 0
+        width: 43
+        height: 50
+      spriteId: 23f33acb0c738274a88b724bdd782532
+    - name: Runner animations_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 19
+        y: 0
+        width: 38
+        height: 47
+      spriteId: 080a7a0429e4fc349a4773968ae91bee
+    - name: Runner animations_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 44
+      spriteId: d5885abe7ddf6104f83496e745499ae8
+    - name: Runner animations_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 24
+        y: 0
+        width: 34
+        height: 40
+      spriteId: 7381eec5d2c8f0a4ebf0612d238498fd
+    - name: Runner animations_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 24
+        y: 0
+        width: 34
+        height: 40
+      spriteId: b33474e20c10818459b26c4e7882e661
+    - name: Runner animations_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 22
+        y: -2
+        width: 39
+        height: 60
+      spriteId: bc28f31e699f3b74eb3ea9042af4276d
+    - name: Runner animations_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 15
+        y: -1
+        width: 49
+        height: 57
+      spriteId: 412b96672aa135542875236a4818db6d
+    - name: Runner animations_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 18
+        y: -1
+        width: 48
+        height: 55
+      spriteId: 7075838090d92224094868fe84f35859
+    - name: Runner animations_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 25
+        y: 0
+        width: 44
+        height: 48
+      spriteId: a6d662e78242f3d41a39bb6e6ee68bb7
+    - name: Runner animations_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 15
+        y: 0
+        width: 54
+        height: 38
+      spriteId: 4e91911dd169dc24ea4779bf1ef9d578
+    - name: Runner animations_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 10
+        y: 0
+        width: 64
+        height: 25
+      spriteId: a9cde5edf12be604d872286bbf2ecb27
+    - name: Runner animations_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 6
+        y: 0
+        width: 72
+        height: 22
+      spriteId: 3d1a98c822e27554ea5f6986feb1773f
+    - name: Runner animations_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 10
+        y: 0
+        width: 68
+        height: 22
+      spriteId: a6d8776df5a8d694bb26b9d6b7b9a1c6
+    - name: Runner animations_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 11
+        y: 0
+        width: 63
+        height: 22
+      spriteId: 3dfa63960f266cc47bba7d7e42de806f
+    - name: Runner animations_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 9
+        y: 0
+        width: 66
+        height: 27
+      spriteId: 530de392c42dfaf4ea94f572b5a9f532
+    - name: Runner animations_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 14
+        y: 0
+        width: 59
+        height: 32
+      spriteId: 9383b1658d842bb489938d18606c00f1
+    - name: Runner animations_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 14
+        y: 0
+        width: 62
+        height: 32
+      spriteId: 662f931c06f69d249bfbbdbc8134dcd0
+    - name: Runner animations_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 18
+        y: 0
+        width: 48
+        height: 44
+      spriteId: f15fe6ddb5c029747815401d3c65bd2d
+    - name: Runner animations_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 26
+        y: 0
+        width: 41
+        height: 54
+      spriteId: 4850f04ed8839f141bc9f549bb226852
+    - name: Runner animations_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 23
+        y: 0
+        width: 44
+        height: 54
+      spriteId: b2d3a013825c4dc498c878d298618445
+    - name: Runner animations_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 22
+        y: 0
+        width: 44
+        height: 61
+      spriteId: 212b276a68523454c8526674095626ed
+    - name: Runner animations_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 42
+        y: 24
+        width: 16
+        height: 16
+      spriteId: ed3ed7335f7af0946afdd6c45ca50dc8
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 83, y: 64}
