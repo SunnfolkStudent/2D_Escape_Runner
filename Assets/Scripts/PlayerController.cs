@@ -1,8 +1,10 @@
+using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool sprinting;
     public float crouchVariable = 2f;
     public float sprintVariable = 2f;
     public float moveSpeed = 5f;
@@ -12,13 +14,14 @@ public class PlayerController : MonoBehaviour
     public float slideDistance = 6f;
     public GameObject collisionBox;
     public GameObject crouchCollisionBox;
+    public GameObject sprintCollisionBox;
 
     public bool isPlayerGrounded;
     public LayerMask whatIsGround;
     
     private Rigidbody2D _rigidbody2D;
     private InputManager _input;
-    // private Animator _animator;
+    private Animator _animator;
     
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _input = GetComponent<InputManager>();
-        //_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -59,11 +62,15 @@ public class PlayerController : MonoBehaviour
             _rigidbody2D.velocity = velocity;
         }
 
-        if (_input.crouchPressed && isPlayerGrounded)
+        if (_input.crouchPressed && isPlayerGrounded && !sprinting)
         {
             moveSpeed /= crouchVariable;
             collisionBox.SetActive(false);
             crouchCollisionBox.SetActive(true);
+            sprintCollisionBox.SetActive(false);
+            _animator.SetBool("crouch", true);
+
+
         }
 
         if (_input.crouchReleased)
@@ -71,16 +78,22 @@ public class PlayerController : MonoBehaviour
             moveSpeed *= crouchVariable;
             collisionBox.SetActive(true);
             crouchCollisionBox.SetActive(false);
+            
+            _animator.SetBool("crouch", false);
         }
 
         if (_input.sprintPressed)
         {
+            sprinting = true;
             moveSpeed *= sprintVariable;
+            _animator.SetBool("sprint", true);
         }
 
         if (_input.sprintReleased)
         {
+            sprinting = false;
             moveSpeed /= sprintVariable;
+            _animator.SetBool("sprint", false);
         }
         
         WallSlide();
@@ -145,6 +158,14 @@ public class PlayerController : MonoBehaviour
         if (!_isWallJumping)
         {
             _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
+            if (_input.moveVector.x != 0)
+            {
+                _animator.SetBool("walk", true);
+            }
+            else
+            {
+                _animator.SetBool("walk", false);
+            }
         }
 
         if (_input.moveVector.x < 0)

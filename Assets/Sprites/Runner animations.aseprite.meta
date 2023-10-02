@@ -2,7 +2,37 @@ fileFormatVersion: 2
 guid: 12a5801d2830f1a4e9fc67ffc4eedd00
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Player_crouch_D
+    second: {fileID: 7400000, guid: 9afae46ad59c8de4ca5a17e3b11a8e07, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Player_enter_slide_D
+    second: {fileID: 7400000, guid: b8506177915f1a440813bc69e2faed56, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Player_getup_standing_D
+    second: {fileID: 7400000, guid: 0938df48b004c6542ba7c419603b3d4a, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Player_idle_D
+    second: {fileID: 7400000, guid: 9d87a3964a4f71f459a02c95ca785abb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Player_run_D
+    second: {fileID: 7400000, guid: c33ea622df9e0e24baa4901171e57bac, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Player_walk_D
+    second: {fileID: 7400000, guid: 856c183a7da1d2d42ab228b8162e5a67, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -95,7 +125,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638318409835925382
+  platformSettingsDirtyTick: 638318537686570421
   textureAssetName: 
   singleSpriteImportData:
   - name: 
