@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool _isCrouching;
+    private bool _isCrouching, _isUnderGround, yes;
     private bool _isSprinting;
     private int _direction = 1;
     
@@ -86,11 +86,18 @@ public class PlayerController : MonoBehaviour
 
             if (_input.crouchReleased)
             {
+                yes = true;
+            }
+            
+            if (yes && !_isUnderGround)
+            {
                 moveSpeed = walkSpeed;
                 collisionBox.SetActive(true);
                 crouchCollisionBox.SetActive(false);
                 _animator.SetBool(Crouch, false);
                 _isCrouching = false;
+
+                yes = false;
             }
         }
 
@@ -187,6 +194,16 @@ public class PlayerController : MonoBehaviour
 
         var transform1 = transform;
         transform1.localScale = new Vector2(_direction, transform1.localScale.y);
+
+        if (_isCrouching)
+        {
+            _isUnderGround = Physics2D.Raycast(transform.position, Vector2.up, 2, whatIsGround);
+            
+        }
+        else
+        {
+            _isUnderGround = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
