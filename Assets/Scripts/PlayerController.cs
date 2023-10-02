@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool crouching;
     public bool sprinting;
     public float crouchVariable = 2f;
     public float sprintVariable = 2f;
@@ -37,6 +38,9 @@ public class PlayerController : MonoBehaviour
     private float _wallJumpingCounter;
     private const float WallJumpingDuration = 0.4f;
     public Vector2 wallJumpingPower = new Vector2(16f, 16f);
+    private static readonly int Sprint = Animator.StringToHash("Sprint");
+    private static readonly int Crouch = Animator.StringToHash("crouch");
+    private static readonly int Sprint1 = Animator.StringToHash("sprint");
 
     private void Start()
     {
@@ -62,40 +66,51 @@ public class PlayerController : MonoBehaviour
             _rigidbody2D.velocity = velocity;
         }
 
-        if (_input.crouchPressed && isPlayerGrounded && !sprinting)
+        if (!sprinting)
         {
-            moveSpeed /= crouchVariable;
-            collisionBox.SetActive(false);
-            crouchCollisionBox.SetActive(true);
-            sprintCollisionBox.SetActive(false);
-            _animator.SetBool("crouch", true);
 
 
+            if (_input.crouchPressed && isPlayerGrounded)
+            {
+
+                moveSpeed /= crouchVariable;
+                collisionBox.SetActive(false);
+                crouchCollisionBox.SetActive(true);
+                sprintCollisionBox.SetActive(false);
+                _animator.SetBool(Crouch, true);
+                crouching = true;
+
+
+            }
+
+            if (_input.crouchReleased)
+            {
+                moveSpeed *= crouchVariable;
+                collisionBox.SetActive(true);
+                crouchCollisionBox.SetActive(false);
+                _animator.SetBool(Crouch, false);
+                crouching = false;
+            }
         }
 
-        if (_input.crouchReleased)
+        if (!crouching)
         {
-            moveSpeed *= crouchVariable;
-            collisionBox.SetActive(true);
-            crouchCollisionBox.SetActive(false);
             
-            _animator.SetBool("crouch", false);
+            if (_input.sprintPressed)
+            {
+                sprinting = true;
+                moveSpeed *= sprintVariable;
+                _animator.SetBool(Sprint1, true);
+            }
+
+            if (_input.sprintReleased)
+            {
+                sprinting = false;
+                moveSpeed /= sprintVariable;
+                _animator.SetBool(Sprint1, false);
+            }
         }
 
-        if (_input.sprintPressed)
-        {
-            sprinting = true;
-            moveSpeed *= sprintVariable;
-            _animator.SetBool("sprint", true);
-        }
-
-        if (_input.sprintReleased )
-        {
-            sprinting = false;
-            moveSpeed /= sprintVariable;
-            _animator.SetBool("sprint", false);
-        }
-        
         WallSlide();
         
         WallJump();

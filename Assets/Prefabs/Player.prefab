@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.051730394}
+  m_Offset: {x: 0, y: -0.057541013}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 1, y: 1.2814572}
   m_EdgeRadius: 0
 --- !u!1 &3209486847301342721
 GameObject:
@@ -242,16 +242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae00ae8dbd5f25478d1cbc53580fcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveVector: {x: 0, y: 0}
   jumpPressed: 0
   jumpReleased: 0
   crouchPressed: 0
   crouchReleased: 0
-  moveVector: {x: 0, y: 0}
   sprintPressed: 0
   sprintReleased: 0
-  sprintHeld: 0
-  usingGamepad: 0
-  usingKeyboard: 0
 --- !u!114 &7525990331520645425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0f4612415b9b84b81c3bb1dd358bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crouching: 0
+  sprinting: 0
   crouchVariable: 2
   sprintVariable: 2
   moveSpeed: 10
@@ -271,8 +270,9 @@ MonoBehaviour:
   distanceToGround: 1.1
   staminaTime: 3
   slideDistance: 6
-  collisionBox: {fileID: 0}
-  crouchCollisionBox: {fileID: 0}
+  collisionBox: {fileID: 4653953003433193295}
+  crouchCollisionBox: {fileID: 2033754595567193843}
+  sprintCollisionBox: {fileID: 6118470033120063769}
   isPlayerGrounded: 0
   whatIsGround:
     serializedVersion: 2
@@ -304,7 +304,7 @@ Animator:
   m_GameObject: {fileID: 3699592821678586978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 7945699198637516273, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2ee6116e206b281448dbe5d5ba158bad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
