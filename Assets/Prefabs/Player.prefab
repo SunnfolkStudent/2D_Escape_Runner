@@ -261,18 +261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0f4612415b9b84b81c3bb1dd358bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crouching: 0
-  sprinting: 0
-  crouchVariable: 2
-  sprintVariable: 2
   moveSpeed: 10
+  walkSpeed: 10
+  crouchSpeed: 5
+  sprintSpeed: 15
   jumpSpeed: 7
-  distanceToGround: 1.1
-  staminaTime: 3
-  slideDistance: 6
+  distanceToGround: 0.5
   collisionBox: {fileID: 4653953003433193295}
   crouchCollisionBox: {fileID: 2033754595567193843}
-  sprintCollisionBox: {fileID: 6118470033120063769}
+  slideCollisionBox: {fileID: 6118470033120063769}
   isPlayerGrounded: 0
   whatIsGround:
     serializedVersion: 2
@@ -281,7 +278,8 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
-  wallJumpingPower: {x: 15, y: 16}
+  wallSlidingSpeed: 2
+  wallJumpingPower: {x: 10, y: 8}
 --- !u!114 &7968212949481612958
 MonoBehaviour:
   m_ObjectHideFlags: 0

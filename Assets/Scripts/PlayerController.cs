@@ -1,46 +1,53 @@
-using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool crouching;
-    public bool sprinting;
-    public float crouchVariable = 2f;
-    public float sprintVariable = 2f;
-    public float moveSpeed = 5f;
-    public float jumpSpeed = 7f;
-    public float distanceToGround = 2f;
-    public float staminaTime = 3f;
-    public float slideDistance = 6f;
-    public GameObject collisionBox;
-    public GameObject crouchCollisionBox;
-    public GameObject sprintCollisionBox;
-
-    public bool isPlayerGrounded;
-    public LayerMask whatIsGround;
+    private bool _isCrouching;
+    private bool _isSprinting;
+    private int _direction = 1;
     
     private Rigidbody2D _rigidbody2D;
     private InputManager _input;
     private Animator _animator;
     
+    [Header("Speeds")]
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float walkSpeed = 10f;
+    [SerializeField] private float crouchSpeed = 5f;
+    [SerializeField] private float sprintSpeed = 15f;
+    [SerializeField] private float jumpSpeed = 7f;
+    
+    // [SerializeField] private float staminaTime = 3f;
+    // [SerializeField] private float slideDistance = 6f;
+    
+    [Header("CollisionBoxes")]
+    [SerializeField] private GameObject collisionBox;
+    [SerializeField] private GameObject crouchCollisionBox;
+    [SerializeField] private GameObject slideCollisionBox;
+    
+    [Header("Grounded?")]
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private float distanceToGround = 0.5f;
+    [SerializeField] private bool isPlayerGrounded;
+    
+    [Header("Walled?")]
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
-    private int _direction = 1;
-
     private bool _isWallSliding;
-    private readonly float _wallSlidingSpeed = 2f;
+    [SerializeField] private float wallSlidingSpeed = 2f;
 
     private bool _isWallJumping = true;
     private float _wallJumpingDirection;
     private const float WallJumpingTime = 0.2f;
     private float _wallJumpingCounter;
     private const float WallJumpingDuration = 0.4f;
-    public Vector2 wallJumpingPower = new Vector2(16f, 16f);
-    private static readonly int Sprint = Animator.StringToHash("Sprint");
+    [SerializeField] private Vector2 wallJumpingPower = new Vector2(16f, 16f);
+    
     private static readonly int Crouch = Animator.StringToHash("crouch");
-    private static readonly int Sprint1 = Animator.StringToHash("sprint");
+    private static readonly int Sprint = Animator.StringToHash("sprint");
+    private static readonly int Walk = Animator.StringToHash("walk");
 
     private void Start()
     {
@@ -66,48 +73,41 @@ public class PlayerController : MonoBehaviour
             _rigidbody2D.velocity = velocity;
         }
 
-        if (!sprinting)
+        if (!_isSprinting)
         {
-
-
             if (_input.crouchPressed && isPlayerGrounded)
             {
-
-                moveSpeed /= crouchVariable;
+                moveSpeed = crouchSpeed;
                 collisionBox.SetActive(false);
                 crouchCollisionBox.SetActive(true);
-                sprintCollisionBox.SetActive(false);
                 _animator.SetBool(Crouch, true);
-                crouching = true;
-
-
+                _isCrouching = true;
             }
 
             if (_input.crouchReleased)
             {
-                moveSpeed *= crouchVariable;
+                moveSpeed = walkSpeed;
                 collisionBox.SetActive(true);
                 crouchCollisionBox.SetActive(false);
                 _animator.SetBool(Crouch, false);
-                crouching = false;
+                _isCrouching = false;
             }
         }
 
-        if (!crouching)
+        if (!_isCrouching)
         {
-            
             if (_input.sprintPressed)
             {
-                sprinting = true;
-                moveSpeed *= sprintVariable;
-                _animator.SetBool(Sprint1, true);
+                _isSprinting = true;
+                moveSpeed = sprintSpeed;
+                _animator.SetBool(Sprint, true);
             }
 
             if (_input.sprintReleased)
             {
-                sprinting = false;
-                moveSpeed /= sprintVariable;
-                _animator.SetBool(Sprint1, false);
+                _isSprinting = false;
+                moveSpeed = walkSpeed;
+                _animator.SetBool(Sprint, false);
             }
         }
 
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
             _isWallSliding = true;
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x,
-                Mathf.Clamp(velocity.y, -_wallSlidingSpeed, float.MaxValue));
+                Mathf.Clamp(velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
         else
         {
@@ -173,14 +173,7 @@ public class PlayerController : MonoBehaviour
         if (!_isWallJumping)
         {
             _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
-            if (_input.moveVector.x != 0)
-            {
-                _animator.SetBool("walk", true);
-            }
-            else
-            {
-                _animator.SetBool("walk", false);
-            }
+            _animator.SetBool(Walk, _input.moveVector.x != 0);
         }
 
         if (_input.moveVector.x < 0)
