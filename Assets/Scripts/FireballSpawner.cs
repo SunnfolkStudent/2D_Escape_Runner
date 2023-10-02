@@ -5,11 +5,8 @@ public class FireballSpawner : MonoBehaviour
     [SerializeField] private GameObject fireballPrefab;
     private bool _projectilePrefabIsNotNull;
 
-    private Rigidbody2D _rigidbody2D;
-
     private void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _projectilePrefabIsNotNull = fireballPrefab != null;
         SpawnFireball();
     }
@@ -19,9 +16,10 @@ public class FireballSpawner : MonoBehaviour
     {
         if (_projectilePrefabIsNotNull)
         {
-            var position = gameObject.transform.position;
+            var thisGameObject = gameObject;
+            var position = thisGameObject.transform.position;
             var spawnPosition = new Vector3(position.x, position.y, 5);
-            var spawnRotation = gameObject.transform.rotation;
+            var spawnRotation = thisGameObject.transform.rotation;
             Instantiate(fireballPrefab, spawnPosition, spawnRotation);
         }
         else
