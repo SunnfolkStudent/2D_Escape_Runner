@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_crouch_D
+  m_Name: Player_get_up_D
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,23 +20,23 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0
+    - time: 0.01
       value: {fileID: -5049320980650739404, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.049999952
+    - time: 0.06
       value: {fileID: -7437580218724454050, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.10000014
+    - time: 0.11
       value: {fileID: -2978887495822729552, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.1500001
+    - time: 0.16
       value: {fileID: 2327958892711753581, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.20000005
+    - time: 0.2
       value: {fileID: 4719256738301265458, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
     - time: 0.25
       value: {fileID: -8988182590630667636, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.29999995
+    - time: 0.3
       value: {fileID: -2961255687382909107, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.35000014
+    - time: 0.35
       value: {fileID: 291552907333518345, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
-    - time: 0.40000015
+    - time: 0.4
       value: {fileID: 291552907333518345, guid: 12a5801d2830f1a4e9fc67ffc4eedd00, type: 3}
     attribute: m_Sprite
     path: 
@@ -74,7 +74,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.41000015
+    m_StopTime: 0.41
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
