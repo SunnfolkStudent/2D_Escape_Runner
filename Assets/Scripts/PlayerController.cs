@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody2D _rigidbody2D;
     private InputManager _input;
-    //private Animator _animator;
+    // private Animator _animator;
     
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
@@ -27,24 +27,24 @@ public class PlayerController : MonoBehaviour
 
     private bool _isWallSliding;
     private readonly float _wallSlidingSpeed = 2f;
-    
+
     private bool _isWallJumping = true;
     private float _wallJumpingDirection;
     private const float WallJumpingTime = 0.2f;
     private float _wallJumpingCounter;
     private const float WallJumpingDuration = 0.4f;
-    public Vector2 wallJumpingPower = new Vector2(15f, 16f);
+    public Vector2 wallJumpingPower = new Vector2(16f, 16f);
 
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _input = GetComponent<InputManager>();
         //_animator = GetComponent<Animator>();
-
     }
 
     private void Update()
     {
+        
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
         if (_input.jumpPressed && isPlayerGrounded)
@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
         _isWallJumping = false;
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void WallJump()
     {
         if (_isWallSliding)
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
     private void Flip()
     {
         var transform1 = transform;
-        Vector3 localScale = transform1.localScale;
+        var localScale = transform1.localScale;
         localScale.x *= -1f;
         transform1.localScale = localScale;
     }

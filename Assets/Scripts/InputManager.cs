@@ -1,80 +1,39 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    [Header("Jump")]
-    [HideInInspector] public bool jumpPressed, jumpReleased;
+    public Vector2 moveVector;
+    public bool jumpPressed;
+    public bool jumpReleased;
+    public bool crouchPressed;
+    public bool crouchReleased;
+    public bool sprintPressed;
+    public bool sprintReleased;
+    private Controls _controls;
 
-    [Header("Crouch")] 
-    [HideInInspector] public bool crouchPressed, crouchReleased;
-    
-    [Header("movement")]
-    [HideInInspector] public Vector2 moveVector;
-
-    [Header("Sprint")] 
-    [HideInInspector] public bool sprintPressed, sprintReleased, sprintHeld;
-
-    private Keyboard _keyboard;
-    private Gamepad _gamepad;
-    [SerializeField] private bool usingGamepad, usingKeyboard;
-
-
-    private void Start()
+    private void Awake()
     {
-        _keyboard = Keyboard.current;
-        _gamepad = Gamepad.current;
+        _controls = new Controls();
+    }
+
+    private void OnEnable()
+    {
+        _controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _controls.Disable();
     }
 
     private void Update()
     {
-        moveVector.x = Input.GetAxis("Horizontal");
-        moveVector.y = Input.GetAxis("Vertical");
-
-        if (_gamepad.wasUpdatedThisFrame)
-        {
-            usingGamepad = true;
-            usingKeyboard = false;
-        }
-        else if (_keyboard.wasUpdatedThisFrame)
-        {
-            usingGamepad = false;
-            usingKeyboard = true;
-        }
-
-        if (usingGamepad && _gamepad != null)
-        {
-           GamepadControls();
-        }
-        else if (usingKeyboard && _keyboard != null)
-        {
-           KeyboardControls();  
-        }
-    }
-
-    private void KeyboardControls()
-    {
-              jumpPressed = _keyboard.spaceKey.wasPressedThisFrame;
-              jumpReleased = _keyboard.spaceKey.wasReleasedThisFrame;
-              
-              crouchPressed = _keyboard.leftCtrlKey.wasPressedThisFrame;
-              crouchReleased = _keyboard.leftCtrlKey.wasReleasedThisFrame;
-              
-              sprintPressed = _keyboard.leftShiftKey.wasPressedThisFrame;
-              sprintReleased = _keyboard.leftShiftKey.wasReleasedThisFrame;
-              sprintHeld = _keyboard.leftShiftKey.isPressed;  
-    }
-    
-    private void GamepadControls()
-    {
-        jumpPressed = _gamepad.buttonSouth.wasPressedThisFrame;
-        jumpReleased = _gamepad.buttonSouth.wasReleasedThisFrame;
-              
-        crouchPressed = _gamepad.buttonEast.wasPressedThisFrame;
-        crouchReleased = _gamepad.buttonEast.wasReleasedThisFrame;
-              
-        sprintPressed = _gamepad.leftStickButton.wasPressedThisFrame;
-        sprintReleased =_gamepad.leftStickButton.wasReleasedThisFrame;
-        sprintHeld = _gamepad.leftStickButton.isPressed; 
+        moveVector = _controls.Player.Move.ReadValue<Vector2>();
+        jumpPressed = _controls.Player.Jump.triggered;
+        jumpReleased = _controls.Player.Jump.WasReleasedThisFrame();
+        crouchPressed = _controls.Player.Crouch.triggered;
+        crouchReleased = _controls.Player.Crouch.WasReleasedThisFrame();
+        sprintPressed = _controls.Player.Sprint.triggered;
+        sprintReleased = _controls.Player.Sprint.WasReleasedThisFrame();
     }
 }
