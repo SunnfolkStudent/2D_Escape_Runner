@@ -145,10 +145,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4343889579859982735}
-  - {fileID: 3943664606359571918}
   - {fileID: 3802922709772144767}
   - {fileID: 4535059823089294502}
+  - {fileID: 3943664606359571918}
+  - {fileID: 4343889579859982735}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &687452405299519661
@@ -266,14 +266,15 @@ MonoBehaviour:
   crouchSpeed: 5
   sprintSpeed: 15
   jumpSpeed: 7
-  distanceToGround: 0.5
   collisionBox: {fileID: 4653953003433193295}
   crouchCollisionBox: {fileID: 2033754595567193843}
+  ColliderTransform: {fileID: 0}
   slideCollisionBox: {fileID: 6118470033120063769}
-  isPlayerGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  distanceToGround: 0.5
+  isPlayerGrounded: 0
   wallCheck: {fileID: 4343889579859982735}
   wallLayer:
     serializedVersion: 2

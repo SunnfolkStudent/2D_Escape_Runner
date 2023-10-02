@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool _isCrouching, _isUnderGround, yes;
+    private bool _isCrouching, _isUnderGround, _isCrouchedReleased;
     private bool _isSprinting;
     private int _direction = 1;
     
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sprintSpeed = 15f;
     [SerializeField] private float jumpSpeed = 7f;
     
+    // [Header("Stamina")]
     // [SerializeField] private float staminaTime = 3f;
     // [SerializeField] private float slideDistance = 6f;
     
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
+        _isCrouchedReleased = _input.crouchReleased;
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
         if (_input.jumpPressed && isPlayerGrounded)
@@ -83,13 +84,8 @@ public class PlayerController : MonoBehaviour
                 _animator.SetBool(Crouch, true);
                 _isCrouching = true;
             }
-
-            if (_input.crouchReleased)
-            {
-                yes = true;
-            }
             
-            if (yes && !_isUnderGround)
+            if (_isCrouchedReleased && !_isUnderGround)
             {
                 moveSpeed = walkSpeed;
                 collisionBox.SetActive(true);
@@ -97,7 +93,7 @@ public class PlayerController : MonoBehaviour
                 _animator.SetBool(Crouch, false);
                 _isCrouching = false;
 
-                yes = false;
+                _isCrouchedReleased = false;
             }
         }
 
