@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour
     private static readonly int Crouch = Animator.StringToHash("crouch");
     private static readonly int Sprint = Animator.StringToHash("sprint");
     private static readonly int Walk = Animator.StringToHash("walk");
+    private static readonly int Jump = Animator.StringToHash("jump");
+    private static readonly int Grounded = Animator.StringToHash("Grounded");
 
     private void Start()
     {
@@ -62,9 +64,11 @@ public class PlayerController : MonoBehaviour
         if (_input.crouchReleased) _isCrouchedReleased = true;
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
+        
         if (_input.jumpPressed && isPlayerGrounded)
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
+            _animator.SetBool(Jump, true);
         }
         
         if (_input.jumpReleased && _rigidbody2D.velocity.y > 0f)
@@ -72,8 +76,24 @@ public class PlayerController : MonoBehaviour
             var velocity = _rigidbody2D.velocity;
             velocity = new Vector2(velocity.x, velocity.y * 0.2f );
             _rigidbody2D.velocity = velocity;
+            
         }
 
+        if (_rigidbody2D.velocity.y > 0f)
+        {
+            _animator.SetBool(Grounded, false);
+        }
+        
+        if (_rigidbody2D.velocity.y < 0f)
+        {
+            _animator.SetBool(Jump, false);
+        }
+
+        if (isPlayerGrounded)
+        {
+            _animator.SetBool(Grounded, true);
+        }
+        
         if (!_isSprinting)
         {
             if (_isCrouchedReleased) _isCrouchedReleased = true;
