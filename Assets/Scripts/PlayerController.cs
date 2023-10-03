@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        _isCrouchedReleased = _input.crouchReleased;
+        if (_input.crouchReleased) _isCrouchedReleased = true;
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
         if (_input.jumpPressed && isPlayerGrounded)
@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
 
         if (!_isSprinting)
         {
+            if (_isCrouchedReleased) _isCrouchedReleased = true;
             if (_input.crouchPressed && isPlayerGrounded)
             {
                 moveSpeed = crouchSpeed;
@@ -99,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
         if (!_isCrouching)
         {
-            if (_input.sprintPressed)
+            if (_input.sprintPressed && isPlayerGrounded)
             {
                 _isSprinting = true;
                 moveSpeed = sprintSpeed;
