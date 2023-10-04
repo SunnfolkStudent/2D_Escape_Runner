@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isSprinting;
     [SerializeField] private bool isWalking;
     [SerializeField] private bool isJumping;
+    [SerializeField] private bool isFalling;
     [SerializeField] private bool isWallSliding;
     [SerializeField] private bool isWallJumping;
     
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
     private static readonly int SprintAnimation = Animator.StringToHash("sprint");
     private static readonly int WalkAnimation = Animator.StringToHash("walk");
     private static readonly int JumpAnimation = Animator.StringToHash("jump");
+    private static readonly int FallingAnimation = Animator.StringToHash("falling");
     private static readonly int GroundedAnimation = Animator.StringToHash("grounded");
     private static readonly int WallJumpingAnimation = Animator.StringToHash("wallJumping");
     private static readonly int WallSlidingAnimation = Animator.StringToHash("wallSliding");
@@ -76,6 +78,11 @@ public class PlayerController : MonoBehaviour
         if (_input.crouchReleased) isCrouchedReleased = true;
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         isUnderGround = isCrouching ? Physics2D.Raycast(transform.position, Vector2.up, 2, whatIsGround) : false;
+        if (isPlayerGrounded)
+        {
+            _animator.SetBool(FallingAnimation, false);
+        }
+        
         _animator.SetBool(GroundedAnimation, isPlayerGrounded);
         
         if (_input.jumpPressed && isPlayerGrounded && _canJump)
@@ -96,6 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetBool(JumpAnimation, false);
             isJumping = false;
+            _animator.SetBool(FallingAnimation, true);
         }
         
         if (_input.crouchPressed && isPlayerGrounded)
@@ -246,6 +254,7 @@ public class PlayerController : MonoBehaviour
     private void StopWallJumping()
     {
         isWallJumping = false;
+        _animator.SetBool(WallJumpingAnimation,false);
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -264,7 +273,7 @@ public class PlayerController : MonoBehaviour
         {
             _wallJumpingCounter -= Time.deltaTime;
         }
-
+        
         if (_input.jumpPressed && _wallJumpingCounter > 0f)
         {
             Flip();
