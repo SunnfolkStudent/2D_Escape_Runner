@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6dcfbaafd170f5c4f9791eb54db6c2c1
+guid: 267252d3bc65fe94d8d46a2df0fc0506
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -118,19 +118,47 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  animatedSpriteImportData: []
+  animatedSpriteImportData:
+  - name: Buttons
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 132
+      height: 32
+    spriteID: d9f3f776001753f4999111c67aa70a09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2064091922
-    name: Wall
+    guid: 2099246669
+    name: Buttons
     layerFlags: 0
     layerType: 0
     blendMode: 0
-    cells: []
+    cells:
+    - name: Buttons
+      frameIndex: 0
+      cellRect:
+        x: 6
+        y: 4
+        width: 132
+        height: 32
+      spriteId: d9f3f776001753f4999111c67aa70a09
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 480, y: 270}
+  canvasSize: {x: 144, y: 46}

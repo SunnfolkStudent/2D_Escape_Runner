@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e6232c5c3a07eb4ebc602a18a9f98b7
+guid: 57011c6b19f03d54d8198157bb6d54d2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -118,16 +118,44 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  animatedSpriteImportData: []
+  animatedSpriteImportData:
+  - name: Decor
+    originalName: 
+    pivot: {x: 0.4860051, y: -0.36507934}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 393
+      height: 126
+    spriteID: bfff13b93334e514582eed616fe77793
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1541179075
-    name: Wall_inside
+    guid: 64833695
+    name: Decor
     layerFlags: 0
     layerType: 0
     blendMode: 0
-    cells: []
+    cells:
+    - name: Decor
+      frameIndex: 0
+      cellRect:
+        x: 49
+        y: 46
+        width: 393
+        height: 126
+      spriteId: bfff13b93334e514582eed616fe77793
     linkedCells: []
     parentIndex: -1
   platformSettings: []
