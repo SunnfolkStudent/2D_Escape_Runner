@@ -793,6 +793,10 @@ PrefabInstance:
       propertyPath: ColliderTransform
       value: 
       objectReference: {fileID: 2041960826}
+    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      propertyPath: wallJumpingPower.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

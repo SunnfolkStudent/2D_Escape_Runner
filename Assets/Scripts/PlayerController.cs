@@ -73,10 +73,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (_input.crouchReleased) isCrouchedReleased = true;
-        
         isPlayerGrounded = IsPlayerGrounded();
         isUnderGround = IsUnderGround();
+        
+        if (_input.crouchReleased || (isUnderGround && isCrouching)) isCrouchedReleased = true;
         
         if (isPlayerGrounded)
         {
