@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: b58ecde6e2199fc47ad579f20a697f5a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Fireball_Animation_Frame_0
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 15
+      height: 29
+    spriteID: 8d8a4691098b27340b493eaee8958b35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Fireball_Animation_Frame_1
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 41
+      width: 15
+      height: 29
+    spriteID: 4c7197c2db6073a46a0b4c6e55236a5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 41}
+  - name: Fireball_Animation_Frame_2
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 78
+      width: 15
+      height: 29
+    spriteID: 8b295ee7f73000e4f8385ae304117cef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 78}
+  - name: Fireball_Animation_Frame_3
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 115
+      width: 15
+      height: 29
+    spriteID: f1047644ca422694d8aa79756608989e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 115}
+  - name: Fireball_Animation_Frame_4
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 152
+      width: 15
+      height: 29
+    spriteID: cc26d100122708349a662c387fe38f20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 152}
+  - name: Fireball_Animation_Frame_5
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 189
+      width: 15
+      height: 29
+    spriteID: b39f995878820444ab359b51c3c805b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 189}
+  - name: Fireball_Animation_Frame_6
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.2068965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 4
+      width: 15
+      height: 29
+    spriteID: dc37272d7401ae74eb5c3e232e093e69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 4}
+  - name: Fireball_Animation_Frame_7
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.5769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 226
+      width: 15
+      height: 26
+    spriteID: 9770a0f203ef4a7428bc61b90d46d693
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 226}
+  - name: Fireball_Animation_Frame_8
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.0434783}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 78
+      width: 15
+      height: 23
+    spriteID: 02a6b47ddb62c8348a6b19c89995a75f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 78}
+  - name: Fireball_Animation_Frame_9
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 140
+      width: 15
+      height: 19
+    spriteID: 657a2fd1f004f6e4a9317fb3a439775e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 140}
+  - name: Fireball_Animation_Frame_10
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 167
+      width: 15
+      height: 19
+    spriteID: 43778828b82ad6f4bb33d4b98f2b43ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 167}
+  - name: Fireball_Animation_Frame_11
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 194
+      width: 15
+      height: 19
+    spriteID: 1128ce6a794563c439be885a69db4cd5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 194}
+  - name: Fireball_Animation_Frame_12
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 221
+      width: 15
+      height: 19
+    spriteID: d740a7ba9c2052642876849ff64f2ea2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 221}
+  - name: Fireball_Animation_Frame_13
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 4
+      width: 15
+      height: 19
+    spriteID: cd7f19157cd7d7848b22270ece29690d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 4}
+  - name: Fireball_Animation_Frame_14
+    originalName: 
+    pivot: {x: 1.6000001, y: -3.2173913}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 109
+      width: 15
+      height: 23
+    spriteID: 5a6d287324cb74a46a0ec9a62280fafc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 109}
+  - name: Fireball_Animation_Frame_15
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 226
+      width: 15
+      height: 26
+    spriteID: 2afb334bbcd4c2842b08e5b98836e45f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 226}
+  - name: Fireball_Animation_Frame_16
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.5517242}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 41
+      width: 15
+      height: 29
+    spriteID: d325946e9267a514e9455fd0310ab7a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 41}
+  - name: Fireball_Animation_Frame_17
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.310345}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 78
+      width: 15
+      height: 29
+    spriteID: 4774e256828bce24494da2d7df0a08db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 78}
+  - name: Fireball_Animation_Frame_18
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.310345}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 115
+      width: 15
+      height: 29
+    spriteID: 09c230795e5b8a14da9b813825afc98b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 115}
+  - name: Fireball_Animation_Frame_19
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.310345}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 152
+      width: 15
+      height: 29
+    spriteID: 15d1a21fb29e2f34f940b0435514415f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 152}
+  - name: Fireball_Animation_Frame_20
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.310345}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 189
+      width: 15
+      height: 29
+    spriteID: ff9486dd01c48504b9dfcae2f24e89ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 189}
+  - name: Fireball_Animation_Frame_21
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.310345}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 4
+      width: 15
+      height: 29
+    spriteID: 050e0538f1e61d246b52d50af8bb3e09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 4}
+  - name: Fireball_Animation_Frame_22
+    originalName: 
+    pivot: {x: 1.6000001, y: -2.310345}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 41
+      width: 15
+      height: 29
+    spriteID: aabbd672612f06f49afad0a9669c7b8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 41}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -440567166
+    name: Fireball_Animation
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Fireball_Animation_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: 8d8a4691098b27340b493eaee8958b35
+    - name: Fireball_Animation_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: 4c7197c2db6073a46a0b4c6e55236a5e
+    - name: Fireball_Animation_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: 8b295ee7f73000e4f8385ae304117cef
+    - name: Fireball_Animation_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: f1047644ca422694d8aa79756608989e
+    - name: Fireball_Animation_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: cc26d100122708349a662c387fe38f20
+    - name: Fireball_Animation_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: b39f995878820444ab359b51c3c805b2
+    - name: Fireball_Animation_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 40
+        y: 64
+        width: 15
+        height: 29
+      spriteId: dc37272d7401ae74eb5c3e232e093e69
+    - name: Fireball_Animation_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 26
+      spriteId: 9770a0f203ef4a7428bc61b90d46d693
+    - name: Fireball_Animation_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 40
+        y: 70
+        width: 15
+        height: 23
+      spriteId: 02a6b47ddb62c8348a6b19c89995a75f
+    - name: Fireball_Animation_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 19
+      spriteId: 657a2fd1f004f6e4a9317fb3a439775e
+    - name: Fireball_Animation_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 19
+      spriteId: 43778828b82ad6f4bb33d4b98f2b43ff
+    - name: Fireball_Animation_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 19
+      spriteId: 1128ce6a794563c439be885a69db4cd5
+    - name: Fireball_Animation_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 19
+      spriteId: d740a7ba9c2052642876849ff64f2ea2
+    - name: Fireball_Animation_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 19
+      spriteId: cd7f19157cd7d7848b22270ece29690d
+    - name: Fireball_Animation_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 23
+      spriteId: 5a6d287324cb74a46a0ec9a62280fafc
+    - name: Fireball_Animation_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 26
+      spriteId: 2afb334bbcd4c2842b08e5b98836e45f
+    - name: Fireball_Animation_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 40
+        y: 74
+        width: 15
+        height: 29
+      spriteId: d325946e9267a514e9455fd0310ab7a6
+    - name: Fireball_Animation_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 29
+      spriteId: 4774e256828bce24494da2d7df0a08db
+    - name: Fireball_Animation_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 29
+      spriteId: 09c230795e5b8a14da9b813825afc98b
+    - name: Fireball_Animation_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 29
+      spriteId: 15d1a21fb29e2f34f940b0435514415f
+    - name: Fireball_Animation_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 29
+      spriteId: ff9486dd01c48504b9dfcae2f24e89ff
+    - name: Fireball_Animation_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 29
+      spriteId: 050e0538f1e61d246b52d50af8bb3e09
+    - name: Fireball_Animation_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 40
+        y: 67
+        width: 15
+        height: 29
+      spriteId: aabbd672612f06f49afad0a9669c7b8f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}
