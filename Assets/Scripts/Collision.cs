@@ -10,5 +10,14 @@ public class Collision : MonoBehaviour
             Debug.Log("Player hit FireWall!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        else if (collision.gameObject.CompareTag("DeathTrap"))
+        {
+            Debug.Log("Player hit DeathTrap!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (collision.gameObject.CompareTag("Goal"))
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 }

@@ -680,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.76
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalPosition.z
@@ -688,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99144495
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalRotation.x
@@ -700,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.13052596
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -712,7 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940803507541497713, guid: aeb17138b5f954d4a9416de1ebcebd01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1051,15 +1051,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -9.873669
+      value: -30.06062
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: 14.8183975
+      value: 36.05989
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: -10.521179
+      value: -29.050991
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
