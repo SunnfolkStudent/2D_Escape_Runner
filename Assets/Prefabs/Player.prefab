@@ -218,7 +218,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: e92bd8e7b64b7ed48b4a587ab31ee6ec, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -261,14 +261,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0f4612415b9b84b81c3bb1dd358bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCrouching: 0
+  isSliding: 0
+  isUnderGround: 0
+  isCrouchedReleased: 0
+  isSprinting: 0
+  isWalking: 0
+  isJumping: 0
+  isFalling: 0
+  isWallSliding: 0
+  isWallJumping: 0
   moveSpeed: 10
   walkSpeed: 10
   crouchSpeed: 5
+  slideSpeed: 12.5
   sprintSpeed: 15
-  jumpSpeed: 7
+  jumpSpeed: 10
+  staminaTime: 3
   collisionBox: {fileID: 4653953003433193295}
   crouchCollisionBox: {fileID: 2033754595567193843}
   slideCollisionBox: {fileID: 6118470033120063769}
+  slideTime: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -277,7 +290,7 @@ MonoBehaviour:
   wallCheck: {fileID: 4343889579859982735}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 8
   wallSlidingSpeed: 2
   wallJumpingPower: {x: 10, y: 8}
 --- !u!114 &7968212949481612958
@@ -392,7 +405,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.0041065514}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -402,7 +415,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 1.9}
   m_EdgeRadius: 0
 --- !u!1 &6118470033120063769
 GameObject:
