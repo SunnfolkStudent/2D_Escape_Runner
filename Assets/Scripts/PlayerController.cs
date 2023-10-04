@@ -22,13 +22,11 @@ public class PlayerController : MonoBehaviour
     [Header("Speeds")]
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float walkSpeed = 10f;
+    [SerializeField] private float fallMoveSpeed = 7.5f;
     [SerializeField] private float crouchSpeed = 5f;
     [SerializeField] private float slideSpeed = 12.5f;
     [SerializeField] private float sprintSpeed = 15f;
     [SerializeField] private float jumpSpeed = 7f;
-    
-    [Header("Stamina")]
-    [SerializeField] private float staminaTime = 3f;
     
     [Header("CollisionBoxes")]
     [SerializeField] private GameObject collisionBox;
@@ -83,6 +81,7 @@ public class PlayerController : MonoBehaviour
         if (isPlayerGrounded)
         {
             _animator.SetBool(FallingAnimation, false);
+            isFalling = false;
         }
         
         _animator.SetBool(GroundedAnimation, isPlayerGrounded);
@@ -106,6 +105,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool(JumpAnimation, false);
             isJumping = false;
             _animator.SetBool(FallingAnimation, true);
+            isFalling = true;
         }
         
         if (_input.crouchPressed && isPlayerGrounded)
@@ -140,6 +140,8 @@ public class PlayerController : MonoBehaviour
         WallJumpCheck();
         
         if (isUnderGround && !isCrouching) Crouch();
+
+        if (isPlayerGrounded && moveSpeed <= 10 && !isCrouching || isWallSliding) moveSpeed = walkSpeed;
     }
 
     private bool IsPlayerGrounded()
@@ -149,7 +151,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsUnderGround()
     {
-        return Physics2D.Raycast(transform.position, Vector2.up, 1.9f, whatIsGround);
+        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 1), Vector2.up, 0.9f, whatIsGround);
     }
 
     private void Walk()
@@ -302,9 +304,10 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (isFalling && moveSpeed > 2.5f) moveSpeed *= 0.99f;
         if (!isWallJumping)
         {
-            _rigidbody2D.velocity = new Vector2(_input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
+            _rigidbody2D.velocity = new Vector2( _input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
             _animator.SetBool(WalkAnimation, _input.moveVector.x != 0);
         }
 
