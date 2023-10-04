@@ -76,8 +76,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (_input.crouchReleased) isCrouchedReleased = true;
-        isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
-        isUnderGround = isCrouching ? Physics2D.Raycast(transform.position, Vector2.up, 2, whatIsGround) : false;
+        
+        isPlayerGrounded = IsPlayerGrounded();
+        isUnderGround = IsUnderGround();
+        
         if (isPlayerGrounded)
         {
             _animator.SetBool(FallingAnimation, false);
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour
             Sprint();
         }
 
-        if (_input.sprintReleased)
+        if (_input.sprintReleased && !isUnderGround)
         {
             Walk();
         }
@@ -136,6 +138,18 @@ public class PlayerController : MonoBehaviour
         WallSlideCheck();
         
         WallJumpCheck();
+        
+        if (isUnderGround && !isCrouching) Crouch();
+    }
+
+    private bool IsPlayerGrounded()
+    {
+        return Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
+    }
+
+    private bool IsUnderGround()
+    {
+        return Physics2D.Raycast(transform.position, Vector2.up, 1.9f, whatIsGround);
     }
 
     private void Walk()
@@ -188,7 +202,7 @@ public class PlayerController : MonoBehaviour
         isCrouching = true;
         isSliding = false;
         isSprinting = false;
-        isCrouchedReleased = false;
+        //isCrouchedReleased = false;
         _canJump = false;
         
         collisionBox.SetActive(false);
@@ -210,7 +224,7 @@ public class PlayerController : MonoBehaviour
         isCrouching = false;
         isSliding = true;
         isSprinting = false;
-        isCrouchedReleased = false;
+        //isCrouchedReleased = false;
         _canJump = false;
         
         collisionBox.SetActive(false);
@@ -222,7 +236,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool(SlideAnimation, true);
         _animator.SetBool(SprintAnimation, false);
         
-        Invoke(nameof(Walk), slideTime);
+        Invoke(IsUnderGround() ? nameof(Crouch) : nameof(Walk), slideTime);
     }
     
     private void WallSlide()
