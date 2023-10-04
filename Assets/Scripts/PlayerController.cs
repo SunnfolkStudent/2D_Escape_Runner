@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
         
         WallJumpCheck();
         
-        if (isUnderGround && !isCrouching) Crouch();
+        if (isUnderGround && !isCrouching && !isSliding) Crouch();
 
         if (isPlayerGrounded && moveSpeed <= 10 && !isCrouching || isWallSliding) moveSpeed = walkSpeed;
     }
