@@ -45,12 +45,16 @@ public class PlayerController : MonoBehaviour
     private float _wallJumpingCounter;
     private const float WallJumpingDuration = 0.4f;
     [SerializeField] private Vector2 wallJumpingPower = new Vector2(16f, 16f);
+
+    private bool _canJump = true;
     
     private static readonly int Crouch = Animator.StringToHash("crouch");
     private static readonly int Sprint = Animator.StringToHash("sprint");
     private static readonly int Walk = Animator.StringToHash("walk");
     private static readonly int Jump = Animator.StringToHash("jump");
-    private static readonly int Grounded = Animator.StringToHash("Grounded");
+    private static readonly int grounded = Animator.StringToHash("grounded");
+    private static readonly int wallJumping = Animator.StringToHash("wallJumping");
+    private static readonly int wallSliding = Animator.StringToHash("wallSliding");
 
     private void Start()
     {
@@ -65,7 +69,7 @@ public class PlayerController : MonoBehaviour
         isPlayerGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
         
         
-        if (_input.jumpPressed && isPlayerGrounded)
+        if (_input.jumpPressed && isPlayerGrounded && _canJump)
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
             _animator.SetBool(Jump, true);
@@ -81,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
         if (_rigidbody2D.velocity.y > 0f)
         {
-            _animator.SetBool(Grounded, false);
+            _animator.SetBool(grounded, false);
         }
         
         if (_rigidbody2D.velocity.y < 0f)
@@ -91,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
         if (isPlayerGrounded)
         {
-            _animator.SetBool(Grounded, true);
+            _animator.SetBool(grounded, true);
         }
         
         if (!_isSprinting)
@@ -104,6 +108,8 @@ public class PlayerController : MonoBehaviour
                 crouchCollisionBox.SetActive(true);
                 _animator.SetBool(Crouch, true);
                 _isCrouching = true;
+
+                _canJump = false;
             }
             
             if (_isCrouchedReleased && !_isUnderGround)
@@ -115,6 +121,7 @@ public class PlayerController : MonoBehaviour
                 _isCrouching = false;
 
                 _isCrouchedReleased = false;
+                _canJump = true;
             }
         }
 
@@ -153,10 +160,12 @@ public class PlayerController : MonoBehaviour
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x,
                 Mathf.Clamp(velocity.y, -wallSlidingSpeed, float.MaxValue));
+            _animator.SetBool(wallSliding, true);
         }
         else
         {
             _isWallSliding = false;
+            
         }
     }
 
@@ -175,6 +184,8 @@ public class PlayerController : MonoBehaviour
             _wallJumpingCounter = WallJumpingTime;
             
             CancelInvoke(nameof(StopWallJumping));
+            
+            
         }
         else
         {
@@ -187,6 +198,7 @@ public class PlayerController : MonoBehaviour
             _isWallJumping = true;
             _rigidbody2D.velocity = new Vector2(_wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             _wallJumpingCounter = 0f;
+            
         }
         
         Invoke(nameof(StopWallJumping), WallJumpingDuration);
