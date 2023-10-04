@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 57011c6b19f03d54d8198157bb6d54d2
+guid: cd49bb2112247ef40957c01c0776af89
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,7 +71,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 0
+    fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -83,7 +83,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 0
+    fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638320155889342830
+  platformSettingsDirtyTick: 638320168125434598
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Decor
+  - name: Chair
     originalName: 
-    pivot: {x: 0.4860051, y: -0.36507934}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 393
-      height: 126
-    spriteID: bfff13b93334e514582eed616fe77793
+      width: 16
+      height: 27
+    spriteID: 23470946f641ce843aa55f85a65a0dd7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 64833695
-    name: Decor
+    guid: -658794795
+    name: Chair
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Decor
+    - name: Chair
       frameIndex: 0
       cellRect:
-        x: 49
-        y: 46
-        width: 393
-        height: 126
-      spriteId: bfff13b93334e514582eed616fe77793
+        x: 0
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 23470946f641ce843aa55f85a65a0dd7
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -183,4 +183,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 480, y: 270}
+  canvasSize: {x: 16, y: 32}
