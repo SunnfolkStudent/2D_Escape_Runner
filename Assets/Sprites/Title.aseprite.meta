@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5f68ada1b957e945b16a579d5e39911
+guid: e5590a535ed61f447a8dfa153fcd1708
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 32
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638321003296146509
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Picture
+  - name: Title
     originalName: 
-    pivot: {x: 0.49999997, y: -0.033333335}
+    pivot: {x: 0.49190938, y: -0.08510638}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 62
-      height: 30
-    spriteID: 8d9f19f8fc747d84293adf19cc84fba4
+      width: 309
+      height: 94
+    spriteID: 08636b4452ae0c348a18eb69edbb62c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,45 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 697776920
-    name: Picture
+    guid: 433284352
+    name: Title
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Picture
+    - name: Title
       frameIndex: 0
       cellRect:
-        x: 9
-        y: 1
-        width: 62
-        height: 30
-      spriteId: 8d9f19f8fc747d84293adf19cc84fba4
+        x: 16
+        y: 8
+        width: 309
+        height: 94
+      spriteId: 08636b4452ae0c348a18eb69edbb62c9
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 32}
+  canvasSize: {x: 336, y: 106}
