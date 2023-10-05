@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Inferno Breakout opening screen_0: -3967457487904189027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
