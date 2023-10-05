@@ -127,7 +127,7 @@ namespace Player
                 Walk();
             }
         
-            if (_input.sprintPressed && isPlayerGrounded && !isCrouching)
+            if (_input.sprintPressed && isPlayerGrounded && !isCrouching && !isUnderGround)
             {
                 Sprint();
             }
