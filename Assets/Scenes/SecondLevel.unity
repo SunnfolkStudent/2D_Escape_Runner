@@ -28590,6 +28590,18 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2852908718894970846, guid: f0df6335f427b4f4e9bcff3a7b52685a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852908718894970846, guid: f0df6335f427b4f4e9bcff3a7b52685a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852908718894970846, guid: f0df6335f427b4f4e9bcff3a7b52685a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852908718894970846, guid: f0df6335f427b4f4e9bcff3a7b52685a, type: 3}
       propertyPath: m_Origin.x
       value: -14
       objectReference: {fileID: 0}
@@ -74115,6 +74127,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5145165243052738794, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
+      propertyPath: fireWallSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5681704439707733446, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
       propertyPath: m_Name
       value: FireWall
@@ -75560,11 +75576,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 15.278417
+      value: 15.562646
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: 0.5630312
+      value: 1.3446665
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
@@ -75572,7 +75588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: 0.62430763
+      value: 1.2416553
       objectReference: {fileID: 0}
     - target: {fileID: 7730851764209186842, guid: d878314a23f80f540be26224c26365a8, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
