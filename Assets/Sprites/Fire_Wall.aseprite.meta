@@ -121,8 +121,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Fire_Wall_Frame_0
     originalName: 
-    pivot: {x: 1.9277108, y: 0.04861111}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -141,8 +141,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 300}
   - name: Fire_Wall_Frame_1
     originalName: 
-    pivot: {x: 1.8823528, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -161,8 +161,8 @@ ScriptedImporter:
     uvTransform: {x: 188, y: 660}
   - name: Fire_Wall_Frame_2
     originalName: 
-    pivot: {x: 1.9047618, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -181,8 +181,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 716}
   - name: Fire_Wall_Frame_3
     originalName: 
-    pivot: {x: 1.8823528, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -201,8 +201,8 @@ ScriptedImporter:
     uvTransform: {x: 188, y: 4}
   - name: Fire_Wall_Frame_4
     originalName: 
-    pivot: {x: 1.9047618, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -221,8 +221,8 @@ ScriptedImporter:
     uvTransform: {x: 96, y: 4}
   - name: Fire_Wall_Frame_5
     originalName: 
-    pivot: {x: 1.9047618, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -241,8 +241,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Fire_Wall_Frame_6
     originalName: 
-    pivot: {x: 1.9277108, y: 0.04861111}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -261,8 +261,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 596}
   - name: Fire_Wall_Frame_7
     originalName: 
-    pivot: {x: 1.8823528, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -281,8 +281,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 4}
   - name: Fire_Wall_Frame_8
     originalName: 
-    pivot: {x: 1.9047618, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -301,8 +301,8 @@ ScriptedImporter:
     uvTransform: {x: 96, y: 688}
   - name: Fire_Wall_Frame_9
     originalName: 
-    pivot: {x: 1.8823528, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -321,8 +321,8 @@ ScriptedImporter:
     uvTransform: {x: 188, y: 332}
   - name: Fire_Wall_Frame_10
     originalName: 
-    pivot: {x: 1.9047618, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -341,8 +341,8 @@ ScriptedImporter:
     uvTransform: {x: 96, y: 346}
   - name: Fire_Wall_Frame_11
     originalName: 
-    pivot: {x: 1.9047618, y: 0}
-    alignment: 9
+    pivot: {x: 1, y: 0}
+    alignment: 8
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
