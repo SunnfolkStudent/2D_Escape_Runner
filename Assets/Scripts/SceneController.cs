@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
@@ -7,7 +8,8 @@ public class SceneController : MonoBehaviour
 {
     public Object timeScreen;
     public Object nextScene;
-    public GameObject canvas;
+    public GameObject text;
+    public GameObject img;
 
     private Text _text;
     private float _startTime;
@@ -16,8 +18,9 @@ public class SceneController : MonoBehaviour
     private void Start()
     {
         _startTime = Time.time;
-        _text = canvas.GetComponent<Text>();
-        canvas.SetActive(false);
+        _text = text.GetComponent<Text>();
+        text.SetActive(false);
+        img.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,7 +30,8 @@ public class SceneController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         
         SceneManager.LoadScene(timeScreen.name);
-        canvas.SetActive(true);
+        text.SetActive(true);
+        img.SetActive(true);
         Debug.Log(_stageTime);
         _text.text = _stageTime.ToString();
         
