@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7933245931806411128}
   - component: {fileID: 438002178445559043}
   - component: {fileID: 3336784903679357727}
-  - component: {fileID: 626776622832035724}
+  - component: {fileID: 8332220883482702504}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: DeathTrap
@@ -167,7 +167,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.0048656464, y: 0}
   m_Radius: 0.2324009
---- !u!95 &626776622832035724
+--- !u!95 &8332220883482702504
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
