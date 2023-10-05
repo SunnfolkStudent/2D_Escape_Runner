@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
     [SerializeField] private float flightTime = 10f;
     [SerializeField] private float speed = 10f;
+    private Animator _animator;
+    
 
     private Rigidbody2D _rigidbody2D;
 
@@ -18,10 +21,19 @@ public class Fireball : MonoBehaviour
         _rigidbody2D.velocity = playerMoveDirection * speed;
         
         Invoke(nameof(DestroyFireball), flightTime);
+        _animator = GetComponent<Animator>();
     }
 
     private void DestroyFireball()
     {
         Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        if (_rigidbody2D.velocity.y > 0) ;
+        {
+            
+        }
     }
 }
