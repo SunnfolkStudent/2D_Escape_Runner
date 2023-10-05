@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 92a0945b21ac84944be13e8fda02bff8
+  - enabled: 1
+    path: Assets/Scenes/ErlendSceneTransitionTest.unity
+    guid: 3bc8bd4c622f74a4198d70227ef4a529
+  - enabled: 1
+    path: Assets/Scenes/TimeScreen.unity
+    guid: 678f4f0c6ba1ef14fa30775310ec63bd
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d230888b890213b4ab8b25affdcdc3c2, type: 2}
   m_UseUCBPForAssetBundles: 0

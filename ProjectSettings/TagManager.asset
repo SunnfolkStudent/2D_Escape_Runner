@@ -10,6 +10,7 @@ TagManager:
   - DeathTrap
   - FireWall
   - Wall
+  - ui
   layers:
   - Default
   - TransparentFX
