@@ -127,7 +127,7 @@ namespace Player
                 Walk();
             }
         
-            if (_input.sprintPressed && isPlayerGrounded && !isCrouching)
+            if (_input.sprintPressed && isPlayerGrounded && !isCrouching && !isUnderGround)
             {
                 Sprint();
             }
@@ -148,7 +148,7 @@ namespace Player
 
         private bool IsPlayerGrounded()
         {
-            return Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
+            return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 1), Vector2.down, distanceToGround, whatIsGround);
         }
 
         private bool IsUnderGround()
