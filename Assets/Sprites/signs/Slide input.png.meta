@@ -67,12 +67,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -289,14 +289,22 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Slide input_0: 568122147699733894
+      Slide input_1: 8481509925583740082
+      Slide input_2: 4718906337084343329
+      Slide input_3: 8568829340933950994
+      Slide input_4: 8643409709318456209
+      Slide input_5: -7566410370219482240
+      Slide input_6: -793490917042884305
+      Slide input_7: 2067631069184447501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
