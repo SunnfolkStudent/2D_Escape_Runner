@@ -2,7 +2,22 @@ fileFormatVersion: 2
 guid: b58ecde6e2199fc47ad579f20a697f5a
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Fire_Falling
+    second: {fileID: 7400000, guid: d089d7e2f8e85c84ab1487d2b498b708, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Fire_Jump
+    second: {fileID: 7400000, guid: c8b5fe2495b2d154fb6a388b08a97191, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Fire_Peak
+    second: {fileID: 7400000, guid: e55872f92b4e0c54b94ef3df32c45646, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -95,7 +110,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638320984330556243
+  platformSettingsDirtyTick: 638321043823741215
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,8 +136,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Fireball_Animation_Frame_0
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -141,8 +156,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Fireball_Animation_Frame_1
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -161,8 +176,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 41}
   - name: Fireball_Animation_Frame_2
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -181,8 +196,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 78}
   - name: Fireball_Animation_Frame_3
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -201,8 +216,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 115}
   - name: Fireball_Animation_Frame_4
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -221,8 +236,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 152}
   - name: Fireball_Animation_Frame_5
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -241,8 +256,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 189}
   - name: Fireball_Animation_Frame_6
     originalName: 
-    pivot: {x: 1.6000001, y: -2.2068965}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -261,8 +276,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 4}
   - name: Fireball_Animation_Frame_7
     originalName: 
-    pivot: {x: 1.6000001, y: -2.5769231}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -281,8 +296,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 226}
   - name: Fireball_Animation_Frame_8
     originalName: 
-    pivot: {x: 1.6000001, y: -3.0434783}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -301,8 +316,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 78}
   - name: Fireball_Animation_Frame_9
     originalName: 
-    pivot: {x: 1.6000001, y: -3.8947368}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -321,8 +336,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 140}
   - name: Fireball_Animation_Frame_10
     originalName: 
-    pivot: {x: 1.6000001, y: -3.8947368}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -341,8 +356,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 167}
   - name: Fireball_Animation_Frame_11
     originalName: 
-    pivot: {x: 1.6000001, y: -3.8947368}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -361,8 +376,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 194}
   - name: Fireball_Animation_Frame_12
     originalName: 
-    pivot: {x: 1.6000001, y: -3.8947368}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -381,8 +396,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 221}
   - name: Fireball_Animation_Frame_13
     originalName: 
-    pivot: {x: 1.6000001, y: -3.8947368}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -401,8 +416,8 @@ ScriptedImporter:
     uvTransform: {x: 73, y: 4}
   - name: Fireball_Animation_Frame_14
     originalName: 
-    pivot: {x: 1.6000001, y: -3.2173913}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -421,8 +436,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 109}
   - name: Fireball_Animation_Frame_15
     originalName: 
-    pivot: {x: 1.6000001, y: -2.846154}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -441,8 +456,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 226}
   - name: Fireball_Animation_Frame_16
     originalName: 
-    pivot: {x: 1.6000001, y: -2.5517242}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -461,8 +476,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 41}
   - name: Fireball_Animation_Frame_17
     originalName: 
-    pivot: {x: 1.6000001, y: -2.310345}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -481,8 +496,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 78}
   - name: Fireball_Animation_Frame_18
     originalName: 
-    pivot: {x: 1.6000001, y: -2.310345}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -501,8 +516,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 115}
   - name: Fireball_Animation_Frame_19
     originalName: 
-    pivot: {x: 1.6000001, y: -2.310345}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -521,8 +536,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 152}
   - name: Fireball_Animation_Frame_20
     originalName: 
-    pivot: {x: 1.6000001, y: -2.310345}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -541,8 +556,8 @@ ScriptedImporter:
     uvTransform: {x: 27, y: 189}
   - name: Fireball_Animation_Frame_21
     originalName: 
-    pivot: {x: 1.6000001, y: -2.310345}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -561,8 +576,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 4}
   - name: Fireball_Animation_Frame_22
     originalName: 
-    pivot: {x: 1.6000001, y: -2.310345}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
