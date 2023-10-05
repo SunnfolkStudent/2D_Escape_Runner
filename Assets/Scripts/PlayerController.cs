@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour
 
     private void WallSlideCheck()
     {
-        if (IsWalled() && !isPlayerGrounded && _input.moveVector.x != 0f)
+        if (IsWalled() && !isPlayerGrounded && _input.moveVector.x != 0f && !isWallJumping)
         {
             WallSlide();
         }

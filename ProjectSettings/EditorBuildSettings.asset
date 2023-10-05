@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ErlendTestLevel.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Start screen.unity
+    guid: c9eb29293abcad64f8e84a9bb1c2b2db
   - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
-    guid: 92a0945b21ac84944be13e8fda02bff8
-  - enabled: 1
-    path: Assets/Scenes/ErlendSceneTransitionTest.unity
-    guid: 3bc8bd4c622f74a4198d70227ef4a529
+    path: Assets/Scenes/Tutorial.unity
+    guid: 5176573fe09c2d54cb514e0ba432c168
   - enabled: 1
     path: Assets/Scenes/TimeScreen.unity
     guid: 678f4f0c6ba1ef14fa30775310ec63bd
+  - enabled: 1
+    path: Assets/Scenes/MainLevel.unity
+    guid: 28e18bc8c304d2e4bb9f2e4332cf7fb0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d230888b890213b4ab8b25affdcdc3c2, type: 2}
   m_UseUCBPForAssetBundles: 0

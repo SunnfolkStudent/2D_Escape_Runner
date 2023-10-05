@@ -103,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 3209486847301342721}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -273,11 +273,11 @@ MonoBehaviour:
   isWallJumping: 0
   moveSpeed: 10
   walkSpeed: 10
+  fallMoveSpeed: 7.5
   crouchSpeed: 5
   slideSpeed: 12.5
   sprintSpeed: 15
   jumpSpeed: 10
-  staminaTime: 3
   collisionBox: {fileID: 4653953003433193295}
   crouchCollisionBox: {fileID: 2033754595567193843}
   slideCollisionBox: {fileID: 6118470033120063769}
@@ -290,9 +290,9 @@ MonoBehaviour:
   wallCheck: {fileID: 4343889579859982735}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   wallSlidingSpeed: 2
-  wallJumpingPower: {x: 10, y: 8}
+  wallJumpingPower: {x: 10, y: 10}
 --- !u!114 &7968212949481612958
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -842,22 +842,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4343889579859982735, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
-      propertyPath: wallLayer.m_Bits
-      value: 264
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
-      propertyPath: ColliderTransform
-      value: 
-      objectReference: {fileID: 2041960826}
-    - target: {fileID: 7525990331520645425, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
-      propertyPath: wallJumpingPower.y
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
