@@ -60492,7 +60492,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 936368623109505750, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17
+      value: -22
       objectReference: {fileID: 0}
     - target: {fileID: 936368623109505750, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
       propertyPath: m_LocalPosition.y
@@ -60532,7 +60532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145165243052738794, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
       propertyPath: fireWallSpeed
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5681704439707733446, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
       propertyPath: m_Name
