@@ -6,8 +6,7 @@ using Object = UnityEngine.Object;
 
 public class SceneController : MonoBehaviour
 {
-    public Object timeScreen;
-    public Object nextScene;
+    public string nextScene;
     public GameObject text;
     public GameObject img;
 
@@ -29,7 +28,7 @@ public class SceneController : MonoBehaviour
         _stageTime = Time.time - _startTime;
         DontDestroyOnLoad(gameObject);
         
-        SceneManager.LoadScene(timeScreen.name);
+        SceneManager.LoadScene("timeScreen");
         text.SetActive(true);
         img.SetActive(true);
         Debug.Log(_stageTime);
@@ -40,7 +39,7 @@ public class SceneController : MonoBehaviour
     
     private void GoToNextScene()
     {
-        SceneManager.LoadScene(nextScene.name);
+        SceneManager.LoadScene(nextScene);
         Destroy(gameObject);
     }
 }
