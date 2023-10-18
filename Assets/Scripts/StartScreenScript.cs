@@ -1,4 +1,3 @@
-using System;
 using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +9,7 @@ public class StartScreenScript : MonoBehaviour
     private void Start()
     {
         _input = GetComponent<InputManager>();
+        Cursor.visible = true;
     }
 
     private void Update()
@@ -18,11 +18,10 @@ public class StartScreenScript : MonoBehaviour
         {
             Play();
         }
-
-        if (_input.crouchPressed)
-        {
-            Quit();
-        }
+        // if (_input.crouchPressed)
+        // {
+        //     Quit();
+        // }
     }
 
     public void Play()

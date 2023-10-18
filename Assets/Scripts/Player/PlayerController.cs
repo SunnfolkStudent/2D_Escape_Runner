@@ -69,6 +69,8 @@ namespace Player
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _input = GetComponent<InputManager>();
             _animator = GetComponent<Animator>();
+            
+            Cursor.visible = false;
         
             Walk();
         }
