@@ -44,7 +44,6 @@ namespace Player
         [Header("Walled?")]
         [SerializeField] private Transform wallCheck;
         [SerializeField] private LayerMask wallLayer;
-
         [SerializeField] private float wallSlidingSpeed = 2f;
         private float _wallJumpingDirection;
         private const float WallJumpingTime = 0.2f;
@@ -77,6 +76,7 @@ namespace Player
 
         private void Update()
         {
+            var moveState = "";
             isPlayerGrounded = IsPlayerGrounded();
             isUnderGround = IsUnderGround();
         
@@ -116,34 +116,36 @@ namespace Player
             {
                 if (isSprinting)
                 {
-                    Slide();
+                    moveState = "Slide";
                 }
                 else
                 {
-                    Crouch();
+                    moveState = "Crouch";
                 }
             }
         
             if (isCrouchedReleased && !isUnderGround && !isSprinting)
             {
-                Walk();
+                moveState = "Walk";
             }
         
             if (_input.sprintPressed && isPlayerGrounded && !isCrouching && !isUnderGround)
             {
-                Sprint();
+                moveState = "Sprint";
             }
 
             if (_input.sprintReleased && !isUnderGround)
             {
-                Walk();
+                moveState = "Walk";
             }
+        
+            if (isUnderGround && !isCrouching && !isSliding) moveState = "Crouch";
+            
+            MoveState(moveState);
 
             WallSlideCheck();
         
             WallJumpCheck();
-        
-            if (isUnderGround && !isCrouching && !isSliding) Crouch();
 
             if (isPlayerGrounded && moveSpeed <= 10 && !isCrouching || isWallSliding) moveSpeed = walkSpeed;
         }
@@ -158,6 +160,27 @@ namespace Player
             return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 1), Vector2.up, 0.9f, whatIsGround);
         }
 
+        private void MoveState(string moveState)
+        {
+            switch (moveState)
+            {
+                case "Walk":
+                    Walk();
+                    break;
+                case "Crouch":
+                    Crouch();
+                    break;
+                case "Slide":
+                    Slide();
+                    break;
+                case "Sprint":
+                    Sprint();
+                    break;
+                default:
+                    break;
+            }   
+        }
+
         private void Walk()
         {
             moveSpeed = walkSpeed;
@@ -168,6 +191,7 @@ namespace Player
             isSprinting = false;
             isCrouchedReleased = false;
             _canJump = true;
+            isWallSliding = false;
         
             collisionBox.SetActive(true);
             crouchCollisionBox.SetActive(false);
@@ -177,27 +201,7 @@ namespace Player
             _animator.SetBool(CrouchAnimation, false);
             _animator.SetBool(SlideAnimation, false);
             _animator.SetBool(SprintAnimation, false);
-        }
-
-        private void Sprint()
-        {
-            moveSpeed = sprintSpeed;
-        
-            isWalking = false;
-            isCrouching = false;
-            isSliding = false;
-            isSprinting = true;
-            isCrouchedReleased = false;
-            _canJump = true;
-        
-            collisionBox.SetActive(true);
-            crouchCollisionBox.SetActive(false);
-            slideCollisionBox.SetActive(false);
-        
-            _animator.SetBool(WalkAnimation, false);
-            _animator.SetBool(CrouchAnimation, false);
-            _animator.SetBool(SlideAnimation, false);
-            _animator.SetBool(SprintAnimation, true);
+            _animator.SetBool(WallSlidingAnimation, false);
         }
 
         private void Crouch()
@@ -210,6 +214,7 @@ namespace Player
             isSprinting = false;
             //isCrouchedReleased = false;
             _canJump = false;
+            isWallSliding = false;
         
             collisionBox.SetActive(false);
             crouchCollisionBox.SetActive(true);
@@ -219,6 +224,7 @@ namespace Player
             _animator.SetBool(CrouchAnimation, true);
             _animator.SetBool(SlideAnimation, false);
             _animator.SetBool(SprintAnimation, false);
+            _animator.SetBool(WallSlidingAnimation, false);
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -232,6 +238,7 @@ namespace Player
             isSprinting = false;
             //isCrouchedReleased = false;
             _canJump = false;
+            isWallSliding = false;
         
             collisionBox.SetActive(false);
             crouchCollisionBox.SetActive(false);
@@ -241,15 +248,55 @@ namespace Player
             _animator.SetBool(CrouchAnimation, false);
             _animator.SetBool(SlideAnimation, true);
             _animator.SetBool(SprintAnimation, false);
+            _animator.SetBool(WallSlidingAnimation, false);
         
             Invoke(IsUnderGround() ? nameof(Crouch) : nameof(Walk), slideTime);
+        }
+
+        private void Sprint()
+        {
+            moveSpeed = sprintSpeed;
+        
+            isWalking = false;
+            isCrouching = false;
+            isSliding = false;
+            isSprinting = true;
+            isCrouchedReleased = false;
+            _canJump = true;
+            isWallSliding = false;
+        
+            collisionBox.SetActive(true);
+            crouchCollisionBox.SetActive(false);
+            slideCollisionBox.SetActive(false);
+        
+            _animator.SetBool(WalkAnimation, false);
+            _animator.SetBool(CrouchAnimation, false);
+            _animator.SetBool(SlideAnimation, false);
+            _animator.SetBool(SprintAnimation, true);
+            _animator.SetBool(WallSlidingAnimation, false);
         }
     
         private void WallSlide()
         {
-            isWallSliding = true;
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x, Mathf.Clamp(velocity.y, -wallSlidingSpeed, float.MaxValue));
+            
+            isWalking = false;
+            isCrouching = false;
+            isSliding = false;
+            isSprinting = false;
+            isCrouchedReleased = false;
+            _canJump = true;
+            isWallSliding = true;
+            
+            collisionBox.SetActive(true);
+            crouchCollisionBox.SetActive(false);
+            slideCollisionBox.SetActive(false);
+            
+            _animator.SetBool(WalkAnimation, false);
+            _animator.SetBool(CrouchAnimation, false);
+            _animator.SetBool(SlideAnimation, false);
+            _animator.SetBool(SprintAnimation, false);
             _animator.SetBool(WallSlidingAnimation, true);
         }
     

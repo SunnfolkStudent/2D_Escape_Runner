@@ -5,12 +5,9 @@ namespace Player
     public class InputManager : MonoBehaviour
     {
         public Vector2 moveVector;
-        public bool jumpPressed;
-        public bool jumpReleased;
-        public bool crouchPressed;
-        public bool crouchReleased;
-        public bool sprintPressed;
-        public bool sprintReleased;
+        public bool jumpPressed, jumpReleased;
+        public bool crouchPressed, crouchReleased;
+        public bool sprintPressed, sprintReleased;
         private Controls _controls;
 
         private void Awake()
