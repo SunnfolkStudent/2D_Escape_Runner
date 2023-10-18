@@ -104,7 +104,7 @@ namespace Player
                 _rigidbody2D.velocity = velocity;
             }
         
-            if (_rigidbody2D.velocity.y < 0f)
+            if (_rigidbody2D.velocity.y < -1f)
             {
                 _animator.SetBool(JumpAnimation, false);
                 isJumping = false;
