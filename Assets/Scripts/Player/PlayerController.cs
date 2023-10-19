@@ -9,8 +9,8 @@ namespace Player
         [SerializeField] private bool isUnderGround;
         [SerializeField] private bool isCrouchedReleased;
         [SerializeField] private bool isSprinting;
-        [SerializeField] private bool isWalking;
-        [SerializeField] private bool isJumping;
+        // [SerializeField] private bool isWalking;
+        // [SerializeField] private bool isJumping;
         [SerializeField] private bool isFalling;
         [SerializeField] private bool isWallSliding;
         [SerializeField] private bool isWallJumping;
@@ -41,7 +41,6 @@ namespace Player
         [SerializeField] private bool isPlayerGrounded;
     
         [Header("Walled?")]
-        [SerializeField] private Transform wallCheck;
         [SerializeField] private LayerMask whatIsWall;
         [SerializeField] private float wallSlidingSpeed = 2f;
         private float _wallJumpingDirection;
@@ -92,7 +91,7 @@ namespace Player
             if (_input.jumpPressed && isPlayerGrounded && _canJump)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
-                isJumping = true;
+                // isJumping = true;
                 _animator.SetBool(JumpAnimation, true);
             }
         
@@ -106,7 +105,7 @@ namespace Player
             if (_rigidbody2D.velocity.y < -1f)
             {
                 _animator.SetBool(JumpAnimation, false);
-                isJumping = false;
+                // isJumping = false;
                 _animator.SetBool(FallingAnimation, true);
                 isFalling = true;
             }
@@ -176,7 +175,7 @@ namespace Player
         {
             moveSpeed = walkSpeed;
         
-            isWalking = true;
+            // isWalking = true;
             isCrouching = false;
             isSliding = false;
             isSprinting = false;
@@ -199,7 +198,7 @@ namespace Player
         {
             moveSpeed = crouchSpeed;
         
-            isWalking = false;
+            // isWalking = false;
             isCrouching = true;
             isSliding = false;
             isSprinting = false;
@@ -222,7 +221,7 @@ namespace Player
         {
             moveSpeed = slideSpeed;
         
-            isWalking = false;
+            // isWalking = false;
             isCrouching = false;
             isSliding = true;
             isSprinting = false;
@@ -247,7 +246,7 @@ namespace Player
         {
             moveSpeed = sprintSpeed;
         
-            isWalking = false;
+            // isWalking = false;
             isCrouching = false;
             isSliding = false;
             isSprinting = true;
@@ -271,7 +270,7 @@ namespace Player
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x, Mathf.Clamp(velocity.y, -wallSlidingSpeed, float.MaxValue));
             
-            isWalking = false;
+            // isWalking = false;
             isCrouching = false;
             isSliding = false;
             isSprinting = false;
