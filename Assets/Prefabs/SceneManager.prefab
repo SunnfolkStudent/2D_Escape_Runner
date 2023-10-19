@@ -159,7 +159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 422383615600133091, guid: 7f7a031e1cf2d184f83a5f7713600466, type: 3}
+      - m_Target: {fileID: 2593487260261900895}
         m_TargetAssemblyTypeName: Player.PauseMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -170,7 +170,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &3155928940205534934
 GameObject:
   m_ObjectHideFlags: 0

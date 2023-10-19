@@ -297,7 +297,7 @@ namespace Player
 
         private void WallSlideCheck()
         {
-            if (IsWalled() && !isPlayerGrounded && _input.moveVector != 0f && !isWallJumping)
+            if (IsWalled() && !isPlayerGrounded && _input.moveVector != 0f && !isWallJumping && _rigidbody2D.velocity.y < 0f)
             {
                 WallSlide();
             }
