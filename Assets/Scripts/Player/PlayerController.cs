@@ -9,8 +9,8 @@ namespace Player
         [SerializeField] private bool isUnderGround;
         [SerializeField] private bool isCrouchedReleased;
         [SerializeField] private bool isSprinting;
-        // [SerializeField] private bool isWalking;
-        // [SerializeField] private bool isJumping;
+        [SerializeField] private bool isWalking;
+        [SerializeField] private bool isJumping;
         [SerializeField] private bool isFalling;
         [SerializeField] private bool isWallSliding;
         [SerializeField] private bool isWallJumping;
@@ -93,7 +93,7 @@ namespace Player
             if (_input.jumpPressed && isPlayerGrounded && _canJump)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
-                // isJumping = true;
+                isJumping = true;
                 _animator.SetBool(JumpAnimation, true);
             }
         
@@ -107,7 +107,7 @@ namespace Player
             if (_rigidbody2D.velocity.y < -1f)
             {
                 _animator.SetBool(JumpAnimation, false);
-                // isJumping = false;
+                isJumping = false;
                 _animator.SetBool(FallingAnimation, true);
                 isFalling = true;
             }
@@ -116,24 +116,24 @@ namespace Player
             {
                 moveState = isSprinting ? "Slide" : "Crouch";
             }
-        
+            
             if (isCrouchedReleased && !isUnderGround && !isSprinting)
             {
                 moveState = "Walk";
             }
-        
+            
             if (_input.sprintPressed && isPlayerGrounded && !isCrouching && !isUnderGround)
             {
                 moveState = "Sprint";
             }
-
+            
             if (_input.sprintReleased && !isUnderGround)
             {
                 moveState = "Walk";
             }
-        
-            if (isUnderGround && !isCrouching && !isSliding) moveState = "Crouch";
             
+            if (isUnderGround && !isCrouching && !isSliding) moveState = "Crouch";
+
             MoveState(moveState);
 
             WallSlideCheck();
@@ -145,7 +145,7 @@ namespace Player
 
         private bool IsPlayerGrounded()
         {
-            return Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, whatIsGround);
+            return Physics2D.BoxCast(transform.position, new Vector2(0.75f, 1), 0, Vector2.down, distanceToGround, whatIsGround);
         }
 
         private bool IsUnderGround()
@@ -177,7 +177,7 @@ namespace Player
         {
             moveSpeed = walkSpeed;
         
-            // isWalking = true;
+            isWalking = true;
             isCrouching = false;
             isSliding = false;
             isSprinting = false;
@@ -200,7 +200,7 @@ namespace Player
         {
             moveSpeed = crouchSpeed;
         
-            // isWalking = false;
+            isWalking = false;
             isCrouching = true;
             isSliding = false;
             isSprinting = false;
@@ -224,7 +224,7 @@ namespace Player
         {
             moveSpeed = slideSpeed;
         
-            // isWalking = false;
+            isWalking = false;
             isCrouching = false;
             isSliding = true;
             isSprinting = false;
@@ -249,7 +249,7 @@ namespace Player
         {
             moveSpeed = sprintSpeed;
         
-            // isWalking = false;
+            isWalking = false;
             isCrouching = false;
             isSliding = false;
             isSprinting = true;
@@ -273,7 +273,7 @@ namespace Player
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x, Mathf.Clamp(velocity.y, -wallSlidingSpeed, float.MaxValue));
             
-            // isWalking = false;
+            isWalking = false;
             isCrouching = false;
             isSliding = false;
             isSprinting = false;
@@ -299,7 +299,7 @@ namespace Player
 
         private void WallSlideCheck()
         {
-            if (IsWalled() && !isPlayerGrounded && _input.moveVector.x != 0f && !isWallJumping)
+            if (IsWalled() && !isPlayerGrounded && _input.moveVector != 0f && !isWallJumping)
             {
                 WallSlide();
             }
@@ -350,15 +350,15 @@ namespace Player
             if (isFalling && moveSpeed > 2.5f) moveSpeed *= 0.99f;
             if (!isWallJumping)
             {
-                _rigidbody2D.velocity = new Vector2( _input.moveVector.x * moveSpeed, _rigidbody2D.velocity.y);
-                _animator.SetBool(WalkAnimation, _input.moveVector.x != 0);
+                _rigidbody2D.velocity = new Vector2( _input.moveVector * moveSpeed, _rigidbody2D.velocity.y);
+                _animator.SetBool(WalkAnimation, _input.moveVector != 0);
             }
 
-            if (_input.moveVector.x < 0)
+            if (_input.moveVector < 0)
             {
                 _direction = -1;
             }
-            else if (_input.moveVector.x > 0)
+            else if (_input.moveVector > 0)
             {
                 _direction = 1;
             }

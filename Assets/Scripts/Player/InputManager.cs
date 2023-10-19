@@ -4,7 +4,7 @@ namespace Player
 {
     public class InputManager : MonoBehaviour
     {
-        public Vector2 moveVector;
+        public float moveVector;
         public bool jumpPressed, jumpReleased;
         public bool crouchPressed, crouchReleased;
         public bool sprintPressed, sprintReleased;
@@ -27,7 +27,7 @@ namespace Player
 
         private void Update()
         {
-            moveVector = _controls.Player.Move.ReadValue<Vector2>();
+            moveVector = _controls.Player.Move.ReadValue<float>();
             jumpPressed = _controls.Player.Jump.triggered;
             jumpReleased = _controls.Player.Jump.WasReleasedThisFrame();
             crouchPressed = _controls.Player.Crouch.triggered;
