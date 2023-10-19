@@ -15,11 +15,7 @@ namespace Player
 
         private void Start()
         {
-            paused.SetActive(false);
-            resume.SetActive(false);
-            mainMenu.SetActive(false);
-
-            isPaused = false;
+            Unpause();
         }
 
         private void Update()
