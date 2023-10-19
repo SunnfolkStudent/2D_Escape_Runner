@@ -9,8 +9,8 @@ namespace Player
         [SerializeField] private bool isUnderGround;
         [SerializeField] private bool isCrouchedReleased;
         [SerializeField] private bool isSprinting;
-        [SerializeField] private bool isWalking;
-        [SerializeField] private bool isJumping;
+        // [SerializeField] private bool isWalking;
+        // [SerializeField] private bool isJumping;
         [SerializeField] private bool isFalling;
         [SerializeField] private bool isWallSliding;
         [SerializeField] private bool isWallJumping;
@@ -24,7 +24,7 @@ namespace Player
         [Header("Speeds")]
         [SerializeField] private float moveSpeed = 10f;
         [SerializeField] private float walkSpeed = 10f;
-        [SerializeField] private float fallMoveSpeed = 7.5f;
+        //[SerializeField] private float fallMoveSpeed = 7.5f;
         [SerializeField] private float crouchSpeed = 5f;
         [SerializeField] private float slideSpeed = 12.5f;
         [SerializeField] private float sprintSpeed = 15f;
@@ -93,7 +93,7 @@ namespace Player
             if (_input.jumpPressed && isPlayerGrounded && _canJump)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
-                isJumping = true;
+                // isJumping = true;
                 _animator.SetBool(JumpAnimation, true);
             }
         
@@ -107,21 +107,14 @@ namespace Player
             if (_rigidbody2D.velocity.y < -1f)
             {
                 _animator.SetBool(JumpAnimation, false);
-                isJumping = false;
+                // isJumping = false;
                 _animator.SetBool(FallingAnimation, true);
                 isFalling = true;
             }
         
             if (_input.crouchPressed && isPlayerGrounded)
             {
-                if (isSprinting)
-                {
-                    moveState = "Slide";
-                }
-                else
-                {
-                    moveState = "Crouch";
-                }
+                moveState = isSprinting ? "Slide" : "Crouch";
             }
         
             if (isCrouchedReleased && !isUnderGround && !isSprinting)
@@ -157,7 +150,8 @@ namespace Player
 
         private bool IsUnderGround()
         {
-            return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 1), Vector2.up, 0.9f, whatIsGround);
+            var position = transform.position;
+            return Physics2D.Raycast(new Vector2(position.x, position.y + 1), Vector2.up, 0.9f, whatIsGround);
         }
 
         private void MoveState(string moveState)
@@ -176,8 +170,6 @@ namespace Player
                 case "Sprint":
                     Sprint();
                     break;
-                default:
-                    break;
             }   
         }
 
@@ -185,7 +177,7 @@ namespace Player
         {
             moveSpeed = walkSpeed;
         
-            isWalking = true;
+            // isWalking = true;
             isCrouching = false;
             isSliding = false;
             isSprinting = false;
@@ -208,7 +200,7 @@ namespace Player
         {
             moveSpeed = crouchSpeed;
         
-            isWalking = false;
+            // isWalking = false;
             isCrouching = true;
             isSliding = false;
             isSprinting = false;
@@ -232,7 +224,7 @@ namespace Player
         {
             moveSpeed = slideSpeed;
         
-            isWalking = false;
+            // isWalking = false;
             isCrouching = false;
             isSliding = true;
             isSprinting = false;
@@ -257,7 +249,7 @@ namespace Player
         {
             moveSpeed = sprintSpeed;
         
-            isWalking = false;
+            // isWalking = false;
             isCrouching = false;
             isSliding = false;
             isSprinting = true;
@@ -281,7 +273,7 @@ namespace Player
             var velocity = _rigidbody2D.velocity;
             _rigidbody2D.velocity = new Vector2(velocity.x, Mathf.Clamp(velocity.y, -wallSlidingSpeed, float.MaxValue));
             
-            isWalking = false;
+            // isWalking = false;
             isCrouching = false;
             isSliding = false;
             isSprinting = false;

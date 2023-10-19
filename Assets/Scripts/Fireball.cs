@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
@@ -9,8 +8,10 @@ public class Fireball : MonoBehaviour
     [SerializeField] private float verticalVelocity;
     public float startTime = 1f;
     private Rigidbody2D _rigidbody2D;
-    
-    
+    private static readonly int Jumping = Animator.StringToHash("Jumping");
+    private static readonly int Falling = Animator.StringToHash("Falling");
+
+
     private void Start()
     { 
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -34,17 +35,16 @@ public class Fireball : MonoBehaviour
     {
         verticalVelocity = _rigidbody2D.velocity.y;
         
-        if (verticalVelocity > 0) ;
+        if (verticalVelocity > 0)
         {
-            _animator.SetBool("Jumping", true);
-            _animator.SetBool("Falling", false);
+            _animator.SetBool(Jumping, true);
+            _animator.SetBool(Falling, false);
         }
         
         if (verticalVelocity < 0)
         {
-            _animator.SetBool("Falling", true);
-            _animator.SetBool("Jumping", false);
+            _animator.SetBool(Falling, true);
+            _animator.SetBool(Jumping, false);
         }
-        
     }
 }

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/TimeScreen.unity
     guid: 678f4f0c6ba1ef14fa30775310ec63bd
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MainLevel.unity
+    path: Assets/Scenes/MainScenes/FirstLevel.unity
     guid: 28e18bc8c304d2e4bb9f2e4332cf7fb0
   - enabled: 1
     path: Assets/Scenes/MainScenes/SecondLevel.unity
