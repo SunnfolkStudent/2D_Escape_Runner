@@ -947,25 +947,9 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 493294283}
-    - target: {fileID: 3124245240338655435, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: jsonFile
-      value: 
-      objectReference: {fileID: 4900000, guid: a021e0f8b2654744497f00eb1b278100, type: 3}
-    - target: {fileID: 3124245240338655435, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: nextScene
-      value: FirstLevel
-      objectReference: {fileID: 0}
     - target: {fileID: 3155928940205534934, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
       propertyPath: m_Name
       value: SceneManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3293278313356031429, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967976126962495368, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

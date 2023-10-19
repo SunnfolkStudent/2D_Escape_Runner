@@ -1,11 +1,7 @@
-using System;
 using System.IO;
 using Player;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.Android;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
@@ -13,6 +9,7 @@ public class SceneController : MonoBehaviour
     public string nextScene;
     public GameObject text;
     public GameObject img;
+    public GameObject newHighScore;
 
     private Behaviour  _pauseMenu;
 
@@ -20,7 +17,7 @@ public class SceneController : MonoBehaviour
     private float _startTime;
     private float _stageTime;
 
-    [SerializeField] private float timeScreenDuration = 3f;
+    [SerializeField] private float timeScreenDuration = 5f;
 
     private void Start()
     {
@@ -28,6 +25,7 @@ public class SceneController : MonoBehaviour
         _text = text.GetComponent<Text>();
         text.SetActive(false);
         img.SetActive(false);
+        newHighScore.SetActive(false);
         _pauseMenu = GetComponentInChildren<PauseMenu>();
     }
 
@@ -61,20 +59,23 @@ public class SceneController : MonoBehaviour
 
             var data = JsonUtility.FromJson<ScoresData>(jsonText);
 
-            if (SceneManager.GetActiveScene().name == "Tutorial")
+            if (SceneManager.GetActiveScene().name == "Tutorial" && data.Scores.Level0 > _stageTime)
             {
+                newHighScore.SetActive(true);
                 Debug.Log("0");
-                data.Scores.Level0 = (int)_stageTime;
+                data.Scores.Level0 = _stageTime;
             }
-            else if (SceneManager.GetActiveScene().name == "FirstLevel")
+            else if (SceneManager.GetActiveScene().name == "FirstLevel" && data.Scores.Level1 > _stageTime)
             {
+                newHighScore.SetActive(true);
                 Debug.Log("1");
-                data.Scores.Level1 = (int)_stageTime;
+                data.Scores.Level1 = _stageTime;
             }
-            else if (SceneManager.GetActiveScene().name == "SecondLevel")
+            else if (SceneManager.GetActiveScene().name == "SecondLevel" && data.Scores.Level2 > _stageTime)
             {
+                newHighScore.SetActive(true);
                 Debug.Log("2");
-                data.Scores.Level2 = (int)_stageTime;
+                data.Scores.Level2 = _stageTime;
             }
 
             var updatedJson = JsonUtility.ToJson(data);
