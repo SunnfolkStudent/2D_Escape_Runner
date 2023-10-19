@@ -24,7 +24,6 @@ namespace Player
         [Header("Speeds")]
         [SerializeField] private float moveSpeed = 10f;
         [SerializeField] private float walkSpeed = 10f;
-        //[SerializeField] private float fallMoveSpeed = 7.5f;
         [SerializeField] private float crouchSpeed = 5f;
         [SerializeField] private float slideSpeed = 12.5f;
         [SerializeField] private float sprintSpeed = 15f;
@@ -219,7 +218,6 @@ namespace Player
             _animator.SetBool(WallSlidingAnimation, false);
         }
 
-        // ReSharper disable Unity.PerformanceAnalysis
         private void Slide()
         {
             moveSpeed = slideSpeed;

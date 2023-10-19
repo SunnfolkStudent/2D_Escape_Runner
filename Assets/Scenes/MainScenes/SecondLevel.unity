@@ -74833,10 +74833,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2349360981375593467, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2349360981375593467, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 114.5
       objectReference: {fileID: 0}
@@ -74875,26 +74871,6 @@ PrefabInstance:
     - target: {fileID: 2349360981375593467, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2675126144902583205, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_Size.x
-      value: 1.9274439
-      objectReference: {fileID: 0}
-    - target: {fileID: 2675126144902583205, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_Size.y
-      value: 3.3376245
-      objectReference: {fileID: 0}
-    - target: {fileID: 2675126144902583205, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.46372217
-      objectReference: {fileID: 0}
-    - target: {fileID: 2675126144902583205, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.168812
-      objectReference: {fileID: 0}
-    - target: {fileID: 3124245240338655435, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
-      propertyPath: nextScene
-      value: StartScreen
       objectReference: {fileID: 0}
     - target: {fileID: 3155928940205534934, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
       propertyPath: m_Name
