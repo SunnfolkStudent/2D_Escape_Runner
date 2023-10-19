@@ -33,4 +33,9 @@ public class StartScreenScript : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Scores()
+    {
+        SceneManager.LoadScene("Scores");
+    }
 }

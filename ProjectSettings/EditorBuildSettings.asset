@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScenes/SecondLevel.unity
     guid: 6a6eb9a81c723634fac3d90e82162856
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Scores.unity
+    guid: e40dfcaf2a250d148ae77f140a9ea726
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d230888b890213b4ab8b25affdcdc3c2, type: 2}
   m_UseUCBPForAssetBundles: 0
