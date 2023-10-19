@@ -348,6 +348,7 @@ MonoBehaviour:
   nextScene: StartScreen
   text: {fileID: 3293278313356031429}
   img: {fileID: 6967976126962495368}
+  timeScreenDuration: 3
 --- !u!1 &3293278313356031429
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 0}
+  isPaused: 0
   paused: {fileID: 8107446667394659295}
   resume: {fileID: 8163061158340006621}
   mainMenu: {fileID: 3002952243107667717}
