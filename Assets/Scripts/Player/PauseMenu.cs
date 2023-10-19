@@ -6,22 +6,32 @@ namespace Player
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] private InputManager input;
-        public GameObject paused;
-        public GameObject resume;
-        public GameObject mainMenu;
-        private bool _isPaused = false;
+        
+        [Header("PauseMenu")]
+        [SerializeField] private  bool isPaused;
+        [SerializeField] private GameObject paused;
+        [SerializeField] private  GameObject resume;
+        [SerializeField] private  GameObject mainMenu;
 
         private void Start()
         {
             paused.SetActive(false);
             resume.SetActive(false);
             mainMenu.SetActive(false);
+
+            isPaused = false;
         }
 
         private void Update()
         {
+            if (isPaused && input.crouchPressed)
+            { 
+                MainMenu();
+            }
+            
             if (!input.pause) return;
-            if (!_isPaused)
+            
+            if (!isPaused)
             {
                 Pause();
             }
@@ -33,7 +43,7 @@ namespace Player
 
         private void Pause()
         {
-            _isPaused = true;
+            isPaused = true;
             Cursor.visible = true;
             
             paused.SetActive(true);
@@ -45,7 +55,7 @@ namespace Player
 
         public void Unpause()
         {
-            _isPaused = false;
+            isPaused = false;
             Cursor.visible = false;
             
             paused.SetActive(false);

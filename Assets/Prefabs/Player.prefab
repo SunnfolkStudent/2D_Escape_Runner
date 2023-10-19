@@ -78,37 +78,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2814572}
   m_EdgeRadius: 0
---- !u!1 &3209486847301342721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4343889579859982735}
-  m_Layer: 0
-  m_Name: WallCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4343889579859982735
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3209486847301342721}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1784160237701481857}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3699592821678586978
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +93,6 @@ GameObject:
   - component: {fileID: 7525990331520645425}
   - component: {fileID: 7968212949481612958}
   - component: {fileID: 8336974841943970200}
-  - component: {fileID: 422383615600133091}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -148,7 +116,6 @@ Transform:
   - {fileID: 3802922709772144767}
   - {fileID: 4535059823089294502}
   - {fileID: 3943664606359571918}
-  - {fileID: 4343889579859982735}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &687452405299519661
@@ -287,7 +254,7 @@ MonoBehaviour:
     m_Bits: 8
   distanceToGround: 0.5
   isPlayerGrounded: 0
-  wallCheck: {fileID: 4343889579859982735}
+  wallCheck: {fileID: 0}
   wallLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -327,22 +294,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &422383615600133091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3699592821678586978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5f58c65668da047a23a0268d12e4da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Paused: {fileID: 0}
-  Resume: {fileID: 0}
-  MainMenu: {fileID: 0}
-  isPaused: 0
 --- !u!1 &4653953003433193295
 GameObject:
   m_ObjectHideFlags: 0

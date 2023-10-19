@@ -14,6 +14,8 @@ public class SceneController : MonoBehaviour
     private float _startTime;
     private float _stageTime;
 
+    [SerializeField] private float timeScreenDuration = 3f;
+
     private void Start()
     {
         _startTime = Time.time;
@@ -34,7 +36,7 @@ public class SceneController : MonoBehaviour
         Debug.Log(_stageTime);
         _text.text = _stageTime.ToString();
         
-        Invoke(nameof(GoToNextScene), 5f);
+        Invoke(nameof(GoToNextScene), timeScreenDuration);
     }
     
     private void GoToNextScene()

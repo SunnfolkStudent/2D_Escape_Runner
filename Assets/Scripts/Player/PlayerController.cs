@@ -292,7 +292,7 @@ namespace Player
     
         private bool IsWalled()
         {
-            return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+            return Physics2D.BoxCast(transform.position, new Vector2(0.125f, 1), 0, Vector2.right * _direction, 0.5f, whatIsGround);
         }
 
         private void WallSlideCheck()
