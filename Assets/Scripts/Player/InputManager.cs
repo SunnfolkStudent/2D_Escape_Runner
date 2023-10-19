@@ -9,6 +9,7 @@ namespace Player
         public bool crouchPressed, crouchReleased;
         public bool sprintPressed, sprintReleased;
         private Controls _controls;
+        public bool pause;
 
         private void Awake()
         {
@@ -34,6 +35,7 @@ namespace Player
             crouchReleased = _controls.Player.Crouch.WasReleasedThisFrame();
             sprintPressed = _controls.Player.Sprint.triggered;
             sprintReleased = _controls.Player.Sprint.WasReleasedThisFrame();
+            pause = _controls.Player.Pause.triggered;
         }
     }
 }
