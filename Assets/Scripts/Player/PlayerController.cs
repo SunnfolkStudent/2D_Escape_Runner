@@ -42,7 +42,7 @@ namespace Player
     
         [Header("Walled?")]
         [SerializeField] private Transform wallCheck;
-        [SerializeField] private LayerMask wallLayer;
+        [SerializeField] private LayerMask whatIsWall;
         [SerializeField] private float wallSlidingSpeed = 2f;
         private float _wallJumpingDirection;
         private const float WallJumpingTime = 0.2f;
@@ -292,7 +292,7 @@ namespace Player
     
         private bool IsWalled()
         {
-            return Physics2D.BoxCast(transform.position, new Vector2(0.125f, 1), 0, Vector2.right * _direction, 0.5f, whatIsGround);
+            return Physics2D.BoxCast(transform.position, new Vector2(0.125f, 1), 0, Vector2.right * _direction, 0.5f, whatIsWall);
         }
 
         private void WallSlideCheck()
