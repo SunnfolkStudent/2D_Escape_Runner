@@ -237,7 +237,7 @@ namespace Player
             _animator.SetBool(WalkAnimation, false);
             _animator.SetBool(CrouchAnimation, false);
             _animator.SetBool(SlideAnimation, true);
-            _animator.SetBool(SprintAnimation, false);
+            //_animator.SetBool(SprintAnimation, false);
             _animator.SetBool(WallSlidingAnimation, false);
         
             Invoke(IsUnderGround() ? nameof(Crouch) : nameof(Walk), slideTime);
