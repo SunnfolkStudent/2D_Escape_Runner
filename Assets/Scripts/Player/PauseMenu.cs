@@ -24,6 +24,11 @@ namespace Player
             { 
                 MainMenu();
             }
+
+            if (isPaused && input.jumpPressed)
+            {
+                Unpause();
+            }
             
             if (!input.pause) return;
             
