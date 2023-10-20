@@ -22,9 +22,9 @@ public class ScoreController : MonoBehaviour
             Debug.Log("Level1: " + data.Scores.Level1);
             Debug.Log("Level2: " + data.Scores.Level2);
 
-            scoreLevel0.text = data.Scores.Level0.ToString(CultureInfo.InvariantCulture);
-            scoreLevel1.text = data.Scores.Level1.ToString(CultureInfo.InvariantCulture);
-            scoreLevel2.text = data.Scores.Level2.ToString(CultureInfo.InvariantCulture);
+            scoreLevel0.text = data.Scores.Level0 == 99 ? "---": data.Scores.Level0.ToString(CultureInfo.InvariantCulture);
+            scoreLevel1.text = data.Scores.Level1 == 99 ? "---": data.Scores.Level1.ToString(CultureInfo.InvariantCulture);
+            scoreLevel2.text = data.Scores.Level2 == 99 ? "---": data.Scores.Level2.ToString(CultureInfo.InvariantCulture);
         }
         else
         {
