@@ -951,6 +951,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5478085816698624343, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8116007537840803767, guid: aca7a0bb145d015488f7ed332a3746b3, type: 3}
+    - target: {fileID: 8501540821698654626, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6087560772952926889, guid: 03a430edde09e044380916d4c4206210, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

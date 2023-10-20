@@ -200,7 +200,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      high score_0: 1732721205278545151
+      high score_1: -8988692582849541792
+      high score_2: -2280699602586697735
+      high score_3: -7972846147659458563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
