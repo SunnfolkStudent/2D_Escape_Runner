@@ -55,6 +55,7 @@ public class SceneController : MonoBehaviour
         if (File.Exists(filePath))
         {
             var jsonText = File.ReadAllText(filePath);
+            Debug.Log(filePath);
             Debug.Log(jsonText);
 
             var data = JsonUtility.FromJson<ScoresData>(jsonText);
