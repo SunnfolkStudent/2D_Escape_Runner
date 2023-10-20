@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 906a681dd908261418e663b914bd1888
+guid: aca7a0bb145d015488f7ed332a3746b3
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      resume-export_0: 8116007537840803767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
