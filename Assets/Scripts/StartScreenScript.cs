@@ -18,10 +18,14 @@ public class StartScreenScript : MonoBehaviour
         {
             Play();
         }
-        // if (_input.crouchPressed)
-        // {
-        //     Quit();
-        // }
+        if (_input.crouchPressed)
+        {
+            Quit();
+        }
+        if (_input.sprintPressed)
+        {
+            Scores();
+        }
     }
 
     public void Play()
