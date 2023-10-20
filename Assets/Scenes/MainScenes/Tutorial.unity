@@ -947,6 +947,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 493294283}
+    - target: {fileID: 3124245240338655435, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
+      propertyPath: nextScene
+      value: FirstLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 3155928940205534934, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
       propertyPath: m_Name
       value: SceneManager
