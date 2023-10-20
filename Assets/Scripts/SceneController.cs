@@ -78,13 +78,18 @@ public class SceneController : MonoBehaviour
                 Debug.Log("2");
                 data.Scores.Level2 = _stageTime;
             }
-
+            
             var updatedJson = JsonUtility.ToJson(data);
+            Debug.Log(updatedJson);
             File.WriteAllText(filePath, updatedJson);
         }
         else
         {
             Debug.Log("JSON file not found.");
+            string defaultText = "{\"Scores\":{\"Level0\":99,\"Level1\":99,\"Level2\":99}}";
+            File.WriteAllText(filePath, defaultText);
+            
+            UpdateScores();
         }
     }
     

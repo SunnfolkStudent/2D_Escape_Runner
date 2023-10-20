@@ -362,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8733294977335011303, guid: 6ecee7284aabfed4bb8ea095fb34fefb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -947,6 +947,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 493294283}
+    - target: {fileID: 3124245240338655435, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
+      propertyPath: nextScene
+      value: FirstLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 3155928940205534934, guid: af5ac48e69f9630488b8316985f6926b, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -60651,7 +60655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5681704439707733446, guid: fcabf13b27d7ca6489667910e7e83909, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
