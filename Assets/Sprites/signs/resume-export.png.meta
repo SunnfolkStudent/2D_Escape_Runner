@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 318165b27592ba64c86f43f0c9527f28
+guid: aca7a0bb145d015488f7ed332a3746b3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3573036208370857778
-    second: download_0
+      213: 8116007537840803767
+    second: resume-export_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: download_0
+      name: resume-export_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 361
-        height: 140
+        x: 29
+        y: 29
+        width: 662
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 237bd813089f59130800000000000000
-      internalID: 3573036208370857778
+      spriteID: 7bfc46fead9d1a070800000000000000
+      internalID: 8116007537840803767
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      download_0: 3573036208370857778
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
