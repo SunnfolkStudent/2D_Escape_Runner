@@ -6,6 +6,7 @@ namespace Player
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] private InputManager input;
+        private GameObject _player;
         
         [Header("PauseMenu")]
         [SerializeField] private  bool isPaused;
@@ -15,6 +16,7 @@ namespace Player
 
         private void Start()
         {
+            _player = GameObject.FindGameObjectWithTag("Player");
             Unpause();
         }
 
@@ -52,6 +54,8 @@ namespace Player
             mainMenu.SetActive(true);
             
             Time.timeScale = 0;
+
+            _player.GetComponent<PlayerController>().enabled = false;
         }
 
         public void Unpause()
@@ -64,6 +68,8 @@ namespace Player
             mainMenu.SetActive(false);
             
             Time.timeScale = 1;
+            
+            _player.GetComponent<PlayerController>().enabled = true;
         }
 
         public void MainMenu()
